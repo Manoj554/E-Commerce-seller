@@ -11,8 +11,8 @@ const Footer = () => {
                     <div className={style.container}>
                         <div className={style.left}>
                             <div className={style.logo}>
-                                <img src="/logo.png" alt="Logo" />
-                                <span className={style.title}>CartAny</span>
+                                <img src="/logo.jpg" alt="Logo" />
+                                
                             </div>
                             <p className={style.text}>Air plant banjo lyft occupy retro adaptogen indego</p>
                         </div>
