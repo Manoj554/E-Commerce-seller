@@ -1,0 +1,41 @@
+.footer{
+    width: 100%;
+    box-shadow: 1px -1px 3px rgb(78, 72, 72);
+    padding: 2rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    width: 25%;
+    padding: 1rem;
+    border: 1px solid;
+    
+}
+.right{
+    flex: 1;
+    border: 1px solid;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo img{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+}
+.text{
+    color: #a0aec0;
+}
