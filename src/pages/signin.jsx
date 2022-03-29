@@ -1,10 +1,10 @@
 import React from 'react';
+import Input from '../components/InputField/Input';
 import Signin from '../contents/Signin';
 
 const signin = () => {
     return (
         <div>
-            <h1>Signin</h1>
             <Signin />
         </div>
     )

@@ -1,0 +1,27 @@
+.box{
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.box label{
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.box input{
+    border: none;
+    padding: 13px 20px;
+    border-radius: 4px;
+    outline: auto;
+    outline-width: 1px;
+    outline-color: #f0f0f0;
+    font-size: 1rem;
+    background-color: #fff;
+    font-weight: 100;
+}
+
+.box input:focus{
+    outline-color: blueviolet;
+}
