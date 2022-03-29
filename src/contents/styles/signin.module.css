@@ -1,6 +1,75 @@
-.text{
-    text-align: center;
-    font-size: 2rem;
+.container{
+    width: 65%;
+    margin: 80px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 0 1px black;
+}
+
+.box{
+    flex: 1;
+    max-height: 100%;
+    min-height: 100%;
+}
+
+.box img{
+    height: 100%;
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+}
+
+.form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 10px 0 0 10px;
+    padding-bottom: 1rem;
+}
+
+.buttons{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn{
+    margin: 9px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #005ae6;
+    color: white;
     font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.btn:hover{
+    background-color: #0d47a1;
+}
+
+.googlebtn{
+    background-color: red;
+}
+.googlebtn:hover{
+    background-color: orange;
+}
+
+.helper{
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.helper span{
     color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.helper span:hover{
+    transform: translateX(2px)
 }

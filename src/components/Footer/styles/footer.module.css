@@ -1,6 +1,6 @@
 .footer{
     width: 100%;
-    box-shadow: -2px -2px 5px rgb(78, 72, 72);
+    box-shadow: -1px -1px 10px #d1d1d1;
     padding: 2rem;
 }
 
@@ -70,7 +70,6 @@
     padding: 0 1rem;
 }
 
-
 .copyright{
     width: 100%;
     background-color: #f0f0f0;
@@ -88,4 +87,9 @@
 .socialmedia li{
     list-style: none;
     margin: 0 8px;
+    cursor: pointer;
+}
+
+.socialmedia li:hover{
+    transform: scale(1.2);
 }
