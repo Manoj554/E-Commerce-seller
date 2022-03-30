@@ -1,5 +1,7 @@
 .maindiv{
-    
+    position:fixed;
+    width:100%;
+    top:0;
     display: flex;
     flex-wrap: nowrap;
     background-color: white;
@@ -8,7 +10,7 @@
     height: 70px;
 }
 .contentdiv{
-    
+    padding: 20px;
     color:#5e5c5d;
     text-align:center;
     width:10%;

@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className={style.container}>
                         <div className={style.left}>
                             <div className={style.logo}>
-                                <img src="/logo.jpg" alt="Logo" />
+                                <img src="/logo5.png" alt="Logo" />
                                 
                             </div>
                             <p className={style.text}>Air plant banjo lyft occupy retro adaptogen indego</p>

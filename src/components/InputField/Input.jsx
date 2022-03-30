@@ -1,11 +1,11 @@
 import React from 'react';
-import style from './input.module.css';
+import styles from './input.module.css';
 
 const Input = ({ label, type, placeholder, name, value, onChange }) => {
     return (
         <>
-            <div className={style.box}>
-                <label htmlFor={name}>{label ? label : 'Label'}</label>
+            {/* <div className={style.box}>
+                <label htmlFor={name}></label>
                 <input
                     type={type ? type : 'text'}
                     name={name}
@@ -13,8 +13,23 @@ const Input = ({ label, type, placeholder, name, value, onChange }) => {
                     onChange={onChange}
                     placeholder={placeholder ? placeholder : 'add placeholder'}
                     autoComplete="off"
-                />
-            </div>
+                /> */}
+                <div className={styles.contentdiv}>
+                            <div className={styles.subcontent}>
+                                {label ? label : 'Label'}
+                            </div>
+                            <div className={styles.subcontent}>
+                                <input  
+                                    type={type ? type : 'text'} 
+                                    name={name}
+                                    value={value}
+                                    onChange={onChange}
+                                    placeholder={placeholder ? placeholder : 'add placeholder'}
+                                    autoComplete="off"
+                                />
+                            </div>
+                 </div>
+            
         </>
     )
 }

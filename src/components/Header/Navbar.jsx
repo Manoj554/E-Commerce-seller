@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <>
             <div className={style.maindiv}>
-                <div className={style.contentdiv}><img src="logo.jpg" height="60px"/></div>
+                <div className={style.contentdiv}><img src="logo5.png" height="50px"/></div>
                 <div className={style.spacediv}></div>
                 <div className={style.contentdiv}>
                     <Link href="/signin">

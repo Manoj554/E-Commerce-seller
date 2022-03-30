@@ -20,13 +20,17 @@ const Signup = () => {
 
     return (
         <>
-            <div className={styles.container}>
-                <div className={styles.box}>
-                    <img src={signupImg.src} alt="Signin Image" />
-                </div>
-                <div className={styles.box}>
-                    <form className={styles.form} onSubmit={handleSubmit}>
-                        <h1 style={{ marginBottom: '10px' }}>CartAny</h1>
+            
+                <div className={styles.backimg}>
+                    <form className={styles.signupform} onSubmit={handleSubmit}>
+                        <div className={styles.maindiv}>
+                            <div className={styles.contentdiv}>
+                                <div className={styles.headmargin}>
+                                    <div className={styles.head}>Welcome to Cartany!</div>
+                                </div>
+                            </div> 
+                        </div>
+                       <div className={styles.maindiv}> 
                         <Input
                             label="Full Name."
                             type="text"
@@ -69,10 +73,23 @@ const Signup = () => {
                             value={formData.cpassword}
                             onChange={handleChange}
                         />
-                        <div className={styles.buttons}>
+                        </div>
+                        <div className={styles.maindiv}>
+                            <div className={styles.contentdiv}>
+                                <div className={styles.buttonmargin}>
+                                    <button className={styles.button} type='submit'>Sign up</button>
+                                    
+                                </div>
+                                <div className={styles.googlemargin}>
+                                    <button className={`${styles.googlebtn} ${styles.button}`} type='submit'>Sign up with Google</button>
+                                    
+                                </div>
+                            </div>
+                    </div>
+                        {/* <div className={styles.buttons}>
                             <button className={styles.btn} type="submit">Signin</button>
                             <button className={`${styles.btn} ${styles.googlebtn}`} type="button">Google</button>
-                        </div>
+                        </div> */}
                         <div className={styles.helper}>
                             <p>Already have an account? <span>
                                 <Link href="/signin">
@@ -82,7 +99,6 @@ const Signup = () => {
                         </div>
                     </form>
                 </div>
-            </div>
 
         </>
     )
