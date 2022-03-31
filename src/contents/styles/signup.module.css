@@ -1,187 +1,129 @@
-/* .container{
-    width: 75%;
-    margin: 30px auto;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    box-shadow: 0 0 1px black;
-    margin-bottom: 70px;
-}
-
-.box{
-    flex: 1;
-    max-height: 100%;
-    min-height: 100%;
-}
-
-.box img{
-    height: 100%;
-    width: 100%;
-    border-radius: 10px 0 0 10px;
-}
-
-.form{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
-    border-radius: 0 10px 10px 0;
-}
-
-.buttons{
-    width: 100%;
-    margin-top: 20px;
-}
-
-.btn{
-    margin: 9px 0;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    background-color: #005ae6;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border: none;
-    outline: none;
-}
-.btn:hover{
-    background-color: #0d47a1;
-}
-
-.googlebtn{
-    background-color: red;
-}
-.googlebtn:hover{
-    background-color: orange;
-}
-
-.helper{
-    width: 100%;
-    padding: 1rem 2rem;
-}
-
-.helper span{
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-}
-.helper span:hover{
-    transform: translateX(2px)
-} */
-
-
-.backimg{
+.backimg {
     background-image: url('/signup.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: right top;
     background-size: cover;
-    padding:15px;
-    
+    padding: 15px;
+
 }
-.signupform{
+
+.signupform {
     background-color: #f9f9f9;
     margin: 100px auto 80px auto;
-    padding:30px;
-    width:36%;
-    
+    padding: 30px;
+    width: 36%;
+
     border: 1px solid #b9b9b9;
     border-radius: 10px;
     box-shadow: 0px 3px 10px #7e7d7d;
-    
+
 }
-.maindiv{
+
+.maindiv {
     color: #696969;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:17px;
+    font-size: 17px;
     font-weight: 500;
 }
-.contentdiv{
-    padding:10px;
+
+.contentdiv {
+    padding: 10px;
 }
-.subcontent{
-    padding:0px;
+
+.subcontent {
+    padding: 0px;
 }
-.inptext{
-    width:100%;
+
+.inptext {
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
-    font-size:17px;
+    font-size: 17px;
     box-sizing: border-box;
 }
-.extradiv{
-    display:flex;
+
+.extradiv {
+    display: flex;
     flex-wrap: nowrap;
 }
-.spandiv{
 
-    width:50%;
+.spandiv {
+
+    width: 50%;
 }
-.spandiv input{
-    width:17px;
-    height:17px;
+
+.spandiv input {
+    width: 17px;
+    height: 17px;
 }
-.forgot{
-    text-align:right;
-    color:rgb(28, 28, 185);
+
+.forgot {
+    text-align: right;
+    color: rgb(28, 28, 185);
     text-decoration: underline;
 }
-.headmargin{
-    padding-bottom:10px;
+
+.headmargin {
+    padding-bottom: 10px;
 }
-.head{
-    color:#696969;
-    text-align:center;
+
+.head {
+    color: #696969;
+    text-align: center;
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
 }
-.buttonmargin{
-    margin-top:5%;
+
+.buttonmargin {
+    margin-top: 5%;
 }
-.googlemargin{
-    margin:10px 0 10px 0;
+
+.googlemargin {
+    margin: 10px 0 10px 0;
 }
-.button{
+
+.button {
     font-size: 17px;
-    border:none;
+    border: none;
     outline: none;
-    width:100%;
-    color:white;
+    width: 100%;
+    color: white;
     background-color: purple;
-    text-align:center;
+    text-align: center;
     border-radius: 4px;
-    padding:10px;
+    padding: 10px;
 }
-.googlebtn{
+
+.googlebtn {
     background-color: rgb(196, 22, 22);
 }
-.button:hover{
+
+.button:hover {
     cursor: pointer;
     background-color: rgb(160, 47, 160);
-    transition:0.6s;
+    transition: 0.6s;
 }
-.googlebtn:hover{
+
+.googlebtn:hover {
     background-color: rgb(218, 47, 47);
 }
-.helper{
+
+.helper {
     width: 100%;
     padding: 1rem 2rem;
     text-align: center;
 }
 
-.helper span{
+.helper span {
     color: #039be5;
     text-decoration: underline;
     cursor: pointer;
 }
-.helper span:hover{
+
+.helper span:hover {
     transform: translateX(2px)
-} 
+}

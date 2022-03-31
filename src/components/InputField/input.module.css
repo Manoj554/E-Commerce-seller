@@ -1,20 +1,21 @@
-
-
-.subcontent input:focus{
+.subcontent input:focus {
     outline-color: blueviolet;
 }
-.contentdiv{
-    padding:10px;
+
+.contentdiv {
+    padding: 10px;
 }
-.subcontent{
-    padding:0px;
+
+.subcontent {
+    padding: 0px;
 }
-.subcontent input{
-    width:100%;
+
+.subcontent input {
+    width: 100%;
     padding: 10px 20px;
     margin: 8px 0;
-    border: 1px solid rgb(148, 148, 148);
+    border: 1px solid #cacaca;
     border-radius: 3px;
-    font-size:17px;
+    font-size: 17px;
     outline-color: #f0f0f0;
 }
