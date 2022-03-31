@@ -1,16 +1,15 @@
 .backimg {
-    background-image: url('/signup.jpg');
+    background-image: url('/signup2.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: top;
     background-size: cover;
     padding: 15px;
-
 }
 
 .signupform {
     background-color: #f9f9f9;
-    margin: 100px auto 80px auto;
+    margin: 100px auto;
     padding: 30px;
     width: 36%;
 
