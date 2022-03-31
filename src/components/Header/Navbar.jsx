@@ -7,15 +7,42 @@ const Navbar = () => {
     return (
         <>
             <div className={style.maindiv}>
-                <div className={style.contentdiv}><img src="logo5.png" height="50px"/></div>
-                <div className={style.spacediv}></div>
-                <div className={style.contentdiv}>
+                <div className={style.contentlogo}><img src="logo5.png" /></div>
+                <div className={style.spacediv}>
+                    <ul className={style.navcontent}>
+                      
+                      <li>
+                        <Link href="/home">
+                            <a>Orders</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/home">
+                            <a>Category</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/home">
+                            <a>Products</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/home">
+                            <a>My users</a>
+                        </Link>
+                      </li>
+                    </ul>
+                </div>
+                <div className={style.contentlogin}>
                     <Link href="/signin">
                         <a>Login</a>
                     </Link>
 
                 </div>  
             </div>  
+            <div className={style.navmargin}>
+
+            </div>
         </>
     )
 }

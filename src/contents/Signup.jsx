@@ -32,7 +32,7 @@ const Signup = () => {
                         </div>
                        <div className={styles.maindiv}> 
                         <Input
-                            label="Full Name."
+                            label="Full Name"
                             type="text"
                             placeholder="Enter your full name"
                             name="name"
@@ -49,7 +49,7 @@ const Signup = () => {
                         />
 
                         <Input
-                            label="Phone No."
+                            label="Phone Number"
                             type="tel"
                             placeholder="Enter your phone no."
                             name="phoneNumber"
