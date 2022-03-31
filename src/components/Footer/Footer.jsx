@@ -12,9 +12,9 @@ const Footer = () => {
                         <div className={style.left}>
                             <div className={style.logo}>
                                 <img src="/logo5.png" alt="Logo" />
-                                
+
                             </div>
-                            <p className={style.text}>Air plant banjo lyft occupy retro adaptogen indego</p>
+                            <p className={style.text}>Cart Anything - Bringing the art to the cart.</p>
                         </div>
                         <div className={style.right}>
                             <FooterBox />
