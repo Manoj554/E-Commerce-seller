@@ -1,8 +1,8 @@
 import axios from 'axios';
 import * as api from '../../apis/apis';
-import { authConstraints } from "./actionConstraints"
+import { authConstraints } from "./actionConstraints";
 
-export const signUpAction = (userData, setState, defaultValue) => async (dispatch) => {
+export const signUpAction = (userData, setState, defaultValue, router) => async (dispatch) => {
     dispatch({ type: authConstraints.SIGNUP_REQUEST });
 
     try {
@@ -10,6 +10,7 @@ export const signUpAction = (userData, setState, defaultValue) => async (dispatc
         alert(data.msg);
         setState(defaultValue);
         dispatch({ type: authConstraints.SIGNUP_SUCCESS, payload: data.msg });
+        router.push('/signin');
     } catch (error) {
         let err = error.response.data.msg;
         dispatch({ type: authConstraints.SIGNUP_FAILED, payload: err });
@@ -42,5 +43,18 @@ export const signOutAction = () => async (dispatch) => {
     } catch (error) {
         let err = error.response.data.msg;
         dispatch({ type: authConstraints.SIGNOUT_FAILED, payload: err });
+    }
+}
+
+export const userLoggedInStatus = () => async (dispatch) => {
+    dispatch({ type: authConstraints.CHECKING_LOGIN_STATUS });
+
+    try {
+        const { data } = await api.getUserInfo();
+        console.log(data);
+        dispatch({ type: authConstraints.USER_LOGGEDIN });
+    } catch (error) {
+        // console.log(error);
+        dispatch({ type: authConstraints.USER_NOT_FOUND });
     }
 }
