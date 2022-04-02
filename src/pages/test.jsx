@@ -1,11 +1,11 @@
 import React from 'react';
-import Products from '../contents/Products';
+import Products from '../contents/Products/Products';
 import Card from '../components/Card/Card';
 
 const test = () => {
     return (
         <div>
-            <Products/>
+            <Products />
         </div>
     )
 }

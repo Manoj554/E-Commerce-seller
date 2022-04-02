@@ -1,12 +1,13 @@
 import React from 'react';
 import PrivatePage from '../layout/PrivatePage';
+import Products from '../contents/Products/Products';
 
-const Products = () => {
+const products = () => {
     return (
         <PrivatePage>
-            <div>This is Product Page</div>
+            <Products />
         </PrivatePage>
     )
 }
 
-export default Products
+export default products

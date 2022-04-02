@@ -1,45 +1,51 @@
-
-
-.card{
-	background-color: #f9f9f9;
-	margin:10px;
-	width:275px;
-	border: 2px solid rgb(233,230,230);
-	color: #5e5c5d;
+.card {
+	background-color: #ffffff;
+	margin: 10px;
+	width: 275px;
+	border: 2px solid rgb(233, 230, 230);
+	color: #000000;
 }
-.imgdiv{
-	width:100%;
-	height:310px;
+
+.imgdiv {
+	width: 100%;
+	height: 310px;
 }
-.imgdiv img{
-	width:100%;
+
+.imgdiv img {
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
-.descdiv{ 
+
+.descdiv {
 	padding: 7px;
 }
-.descdiv div{
+
+.descdiv div {
 	white-space: nowrap;
 	overflow: hidden;
-	text-overflow: ellipsis; 
-	font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-	padding:3px 10px;
+	text-overflow: ellipsis;
+	font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+	padding: 3px 10px;
 }
-.branddiv{
+
+.branddiv {
 	font-size: 18px;
-    font-weight: 600;
+	font-weight: 600;
 }
-.typediv{
+
+.typediv {
 	font-size: 17px;
-    font-weight: 300;
+	font-weight: 300;
 }
-.pricediv{
+
+.pricediv {
 	font-size: 17px;
-    font-weight: 600;
+	font-weight: 600;
 }
-.discspan{
+
+.discspan {
 	font-size: 17px;
-    font-weight: 400;
-	color:orangered;
+	font-weight: 400;
+	color: orangered;
 }
