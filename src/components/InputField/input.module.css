@@ -14,8 +14,9 @@
     width: 100%;
     padding: 10px 20px;
     margin: 8px 0;
-    border: 1px solid #cacaca;
-    border-radius: 3px;
+    border: none;
+    box-shadow: inset 0 0 2px #000000;
+    border-radius: 4px;
     font-size: 17px;
     outline-color: #f0f0f0;
 }

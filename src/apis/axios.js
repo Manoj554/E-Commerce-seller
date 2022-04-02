@@ -5,6 +5,12 @@ const API = axios.create({
     baseURL: baseUrl,
 });
 
+API.interceptors.request.use(async (req) => {
+    const { data } = await axios.get('/api/getcookie');
+    req.headers.Authorization = data.token;
+    return req;
+});
+
 API.interceptors.response.use((res) => {
     return res;
 }, (err) => {
