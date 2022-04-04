@@ -1,5 +1,5 @@
 .subcontent input:focus {
-    outline-color: blueviolet;
+    outline:2px solid rgb(188, 148, 226);
 }
 
 .contentdiv {

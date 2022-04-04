@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {FaGoogle} from "react-icons/fa";
 import styles from './styles/signin.module.css';
 import Input from '../components/InputField/Input';
 import Link from 'next/link';
@@ -67,7 +68,7 @@ const Signin = () => {
                                         <button className={styles.button} type='submit'>Sign in</button>
                                     </div>
                                     <div className={styles.googlemargin}>
-                                        <button className={`${styles.googlebtn} ${styles.button}`} type='submit'>Sign in with Google</button>
+                                        <button className={`${styles.googlebtn} ${styles.button}`} type='submit'><span id={styles.googlelogo}><FaGoogle/></span> Sign in with Google </button>
 
                                     </div>
                                 </div>

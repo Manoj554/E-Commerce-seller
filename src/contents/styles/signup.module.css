@@ -131,3 +131,6 @@
 .helper span:hover {
     transform: translateX(2px)
 }
+#googlelogo{
+    font-size: 14px;
+}

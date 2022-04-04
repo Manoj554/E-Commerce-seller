@@ -1,0 +1,127 @@
+.maindiv{
+    padding:40px;
+    color: #555455;
+    font-size: 17.3px;
+    background-color: #f5f5f5;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+.tablediv{
+    
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(199, 199, 199);
+}
+.heading{
+    margin:0 0 50px 0;
+    position:relative;
+    background-image: url('/addproduct.jpg');
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:40px 0 40px 80px;
+    
+    color: white;
+    
+}
+.tablecontainer{
+    padding:0 40px 0 0;
+}
+.tablediv table{
+    width:100%;
+    text-align: left;
+    
+}
+
+.tablediv table,.tablediv th,.tablediv td{
+    vertical-align: top;
+    font-weight: 600;
+    /* border:1px solid red;
+    border-collapse: collapse; */
+}
+.tablediv th{
+    padding:20px 0 20px 80px;
+    width: 20%;
+}
+.tablediv td{
+    padding:20px;
+}
+.inptxt input, .inptxt select{
+    font-family: inherit;
+    padding: 10px 20px;
+    width:100%;
+    border: none;
+    box-shadow: inset 0 0 2px #000000;
+    border-radius: 3px;
+    font-size: 17px;
+    outline-color: #f0f0f0;
+}
+.inptxt input{
+    color: rgb(102, 102, 102);
+}
+.inptxt select{
+    background-color: white;
+    color:rgb(184, 184, 184);
+}
+.inptxt input:focus, .inptxt textarea:focus{
+    outline:2px solid rgb(188, 148, 226);
+}
+.inptxt input::placeholder{
+	color:rgb(184, 184, 184);
+	opacity: 1;
+}
+
+.inptxt textarea {
+    width:100%;
+    height: 200px;
+    border: 2px solid rgb(204, 203, 203);
+    border-radius: 3px;
+    font-size: 17px;
+    resize: none;
+ }
+
+ .inpfile input[type="file"]{
+  display: none;   
+ }
+ .customfileupload {
+    background-color: rgb(87, 118, 255);
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    width: 170px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.customfileupload span{
+    padding:2.5px 6px 0 0;
+}
+.submitbtn{
+    text-align: center;
+    padding:40px 0 80px 0;
+}
+.submitbtn button{
+    border: none;
+    border-radius: 4px;
+    
+    color: white;
+    font-size: 18px;
+    padding:10px 20px;
+    cursor: pointer;
+    margin:0 20px;
+}
+.submit{
+    background-color: rgb(17, 180, 17);
+}
+.cancel{
+    background-color: rgb(219, 34, 34);
+}
+.submit:hover{
+    background-color: green;
+    transition: 0.3s;
+}
+.cancel:hover{
+    background-color: rgb(190, 17, 17);
+    transition: 0.3s;
+}
