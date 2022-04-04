@@ -1,12 +1,17 @@
-import React from 'react';
-import Products from '../contents/Products/Products';
-import Card from '../components/Card/Card';
+import React, { useState } from 'react';
+import FileBase64 from 'react-file-base64';
 
 const test = () => {
+    const [file, setFile] = useState('');
     return (
         <div>
-            <Products />
+            <FileBase64
+                multiple={false}
+                onDone={(base) => setFile(base)}
+            />
+            {console.log(file)}
         </div>
+
     )
 }
 

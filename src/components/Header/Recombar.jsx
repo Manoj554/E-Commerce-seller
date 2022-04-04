@@ -1,13 +1,16 @@
 import React from 'react'
 import styles from './styles/recombar.module.css';
 import { FaSearch } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Recombar = () => {
 	return (
 		<>
 			<div className={styles.recombardiv}>
 				<div className={styles.adddiv}>
-					<button>+ Add products</button>
+					<Link href="/products/add-new-product">
+						<button>+ Add products</button>
+					</Link>
 				</div>
 				<div className={styles.searchdiv}>
 					<ul>

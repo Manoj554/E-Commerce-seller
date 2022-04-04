@@ -1,0 +1,70 @@
+.formbox {
+    width: 100%;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.selectbox {
+    width: 100%;
+    padding: 0 10px;
+
+}
+
+.selectbox select {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    box-shadow: inset 0 0 2px #000000;
+    border-radius: 4px;
+    font-size: 17px;
+    outline-color: #f0f0f0;
+}
+
+.media {
+    padding: 10px;
+}
+
+.media input {
+    width: 100%;
+    /* padding: 10px; */
+    margin: 8px 0;
+    border: none;
+    box-shadow: inset 0 0 2px #000000;
+    border-radius: 4px;
+    font-size: 17px;
+    outline-color: #f0f0f0;
+}
+
+.selectbox option {
+    padding: 1rem;
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modalBtn {
+    margin: 0 10px;
+    padding: 9px 22px;
+    font-size: 16px;
+    background-color: #2979ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modalBtn:hover {
+    background-color: #488aff;
+}
+
+.cancelBtn {
+    background-color: #e64a19;
+}
+
+.cancelBtn:hover {
+    background-color: #ff7043;
+}

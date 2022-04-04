@@ -13,3 +13,9 @@ export const authConstraints = {
     USER_NOT_FOUND: "USER_NOT_FOUND"
 
 }
+
+export const categoryConstraints = {
+    ADD_NEW_CATEGORY_REQUEST: "ADD_NEW_CATEGORY_REQUEST",
+    ADD_NEW_CATEGORY_FAILED: "ADD_NEW_CATEGORY_FAILED",
+    ADD_NEW_CATEGORY_SUCCESS: "ADD_NEW_CATEGORY_SUCCESS",
+}

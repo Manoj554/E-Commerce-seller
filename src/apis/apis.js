@@ -6,4 +6,6 @@ export const signInApi = (data) => API.post('/auth/signin', data);
 
 export const signOutApi = () => API.get('/auth/signout');
 
-export const getUserInfo = () => API.get('/auth/get-user-info');
+export const getUserInfoApi = () => API.get('/auth/get-user-info');
+
+export const addNewCategoryApi = (category) => API.post('/category/add-new-category', category);

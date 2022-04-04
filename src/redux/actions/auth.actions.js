@@ -50,11 +50,11 @@ export const userLoggedInStatus = () => async (dispatch) => {
     dispatch({ type: authConstraints.CHECKING_LOGIN_STATUS });
 
     try {
-        const { data } = await api.getUserInfo();
+        const { data } = await api.getUserInfoApi();
         console.log(data);
         dispatch({ type: authConstraints.USER_LOGGEDIN });
     } catch (error) {
-        // console.log(error);
+        signOutAction();
         dispatch({ type: authConstraints.USER_NOT_FOUND });
     }
 }

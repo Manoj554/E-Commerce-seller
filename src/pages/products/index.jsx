@@ -1,6 +1,6 @@
 import React from 'react';
-import PrivatePage from '../layout/PrivatePage';
-import Products from '../contents/Products/Products';
+import PrivatePage from '../../layout/PrivatePage';
+import Products from '../../contents/Products/Products';
 
 const products = () => {
     return (
@@ -10,4 +10,4 @@ const products = () => {
     )
 }
 
-export default products
+export default products;
