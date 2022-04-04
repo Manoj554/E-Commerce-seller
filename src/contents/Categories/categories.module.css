@@ -1,70 +1,105 @@
-.formbox {
+.categoriesdiv {
+    padding: 40px;
+    color: #5e5c5d;
+    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(199, 199, 199);
+}
+
+.tablediv {
+    padding: 20px;
+}
+
+.tablediv table {
+
     width: 100%;
-}
-
-.title {
-    margin-bottom: 20px;
-}
-
-.selectbox {
-    width: 100%;
-    padding: 0 10px;
+    text-align: center;
 
 }
 
-.selectbox select {
-    width: 100%;
-    padding: 10px 20px;
-    margin: 8px 0;
-    border: none;
-    box-shadow: inset 0 0 2px #000000;
-    border-radius: 4px;
-    font-size: 17px;
-    outline-color: #f0f0f0;
+.tablediv table,
+.tablediv th,
+.tablediv td {
+    border: 1px solid #e2e2e2;
+    border-collapse: collapse;
 }
 
-.media {
-    padding: 10px;
+.tablediv th,
+.tablediv td {
+    padding: 20px 20px;
 }
 
-.media input {
-    width: 100%;
-    /* padding: 10px; */
-    margin: 8px 0;
-    border: none;
-    box-shadow: inset 0 0 2px #000000;
-    border-radius: 4px;
-    font-size: 17px;
-    outline-color: #f0f0f0;
+.tablediv tr {
+    background-color: white;
 }
 
-.selectbox option {
-    padding: 1rem;
+.tablediv tr:nth-child(even) {
+    background-color: rgb(245, 244, 244);
 }
 
-.actionButtons {
+.buttondiv {
+    padding: 20px 20px 0 20px;
     display: flex;
-    justify-content: flex-end;
 }
 
-.modalBtn {
-    margin: 0 10px;
-    padding: 9px 22px;
-    font-size: 16px;
-    background-color: #2979ff;
-    border: none;
-    border-radius: 4px;
+.buttondiv div {
+    flex: 1;
+    text-align: left;
+}
+
+.buttondiv button {
+    background-color: rgb(12, 184, 20);
+
     cursor: pointer;
+    font-size: 20px;
+    border: none;
+    color: white;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    border-radius: 4px;
+    padding: 10px 20px;
 }
 
-.modalBtn:hover {
-    background-color: #488aff;
+.buttondiv button:hover {
+    background-color: rgb(8, 156, 15);
+    transition: 0.4s;
 }
 
-.cancelBtn {
-    background-color: #e64a19;
+#id {
+    font-weight: bold;
 }
 
-.cancelBtn:hover {
-    background-color: #ff7043;
+#active {
+    color: rgb(9, 167, 9);
+}
+
+#inactive {
+    color: rgb(235, 10, 10)
+}
+
+#delete,
+#edit {
+    cursor: pointer;
+    font-size: 23px;
+}
+
+#delete {
+    color: red;
+
+}
+
+#edit {
+    color: rgb(16, 143, 227);
+}
+
+#delete:hover {
+    color: rgb(212, 17, 17);
+}
+
+#edit:hover {
+    color: rgb(0, 0, 204);
 }

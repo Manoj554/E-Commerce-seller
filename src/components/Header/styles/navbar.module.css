@@ -9,12 +9,9 @@
     text-align: center;
     font-size: 17.3px;
     font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    ;
     font-weight: 600;
     background-color: white;
     box-shadow: 0px 0px 4px rgb(100, 100, 100);
-    background-color: #f9f9f9;
-    border-bottom: 1px solid rgb(233, 230, 230);
     height: 70px;
     z-index: 1;
 }
@@ -37,7 +34,7 @@
 }
 
 .contentlogin {
-    width: 120px;
+    width: 125px;
     margin: 0 20px;
 
 }
