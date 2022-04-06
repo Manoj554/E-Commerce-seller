@@ -5,7 +5,7 @@ export default function setToken(req, res) {
   res.setHeader("Set-Cookie", serialize('token', token, {
     httpOnly: true,
     path: '/',
-    maxAge: 2 * 60
+    maxAge: 2 * 60 * 60
   }));
   res.status(200).json({});
 }

@@ -54,7 +54,6 @@
 
 .buttondiv button {
     background-color: rgb(12, 184, 20);
-
     cursor: pointer;
     font-size: 20px;
     border: none;
@@ -69,37 +68,44 @@
     transition: 0.4s;
 }
 
-#id {
+.id {
     font-weight: bold;
 }
 
-#active {
+.active {
     color: rgb(9, 167, 9);
 }
 
-#inactive {
+.inactive {
     color: rgb(235, 10, 10)
 }
 
-#delete,
-#edit {
+.delete,
+.edit {
     cursor: pointer;
     font-size: 23px;
 }
 
-#delete {
+.delete {
     color: red;
-
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 3;
 }
 
-#edit {
+.icon {
+    z-index: 1;
+}
+
+.edit {
     color: rgb(16, 143, 227);
 }
 
-#delete:hover {
+.delete:hover {
     color: rgb(212, 17, 17);
 }
 
-#edit:hover {
+.edit:hover {
     color: rgb(0, 0, 204);
 }

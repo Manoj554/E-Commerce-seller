@@ -9,11 +9,11 @@ const Layout = ({ children }) => {
     const auth = useSelector(state => state.auth);
     const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //     if (!auth.authenticate) {
-    //         dispatch(userLoggedInStatus());
-    //     }
-    // }, [auth.authenticate]);
+    useEffect(() => {
+        if (!auth.authenticate) {
+            dispatch(userLoggedInStatus());
+        }
+    }, [auth.authenticate]);
 
     return (
         <div>

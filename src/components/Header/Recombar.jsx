@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles/recombar.module.css';
 import { GoSearch } from 'react-icons/go';
+import Link from 'next/link';
 
 const Recombar = () => {
 	return (

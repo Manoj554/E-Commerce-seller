@@ -1,68 +1,52 @@
-import React from 'react'
-import styles from './categories.module.css'
-import { RiDeleteBin6Fill } from "react-icons/ri";
-import { RiEdit2Fill } from "react-icons/ri"
+import React from 'react';
+import styles from './categories.module.css';
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import TableRow from './TableRow';
 
 const Categories = () => {
+    const category = useSelector(state => state.category);
+
     return (
         <>
             <div className={styles.categoriesdiv}>
                 <div className={styles.container}>
                     <div className={styles.buttondiv}>
-                        <button>Add Category</button>
+                        <Link href="/categories/add-new-category">
+                            <button>Add Category</button>
+                        </Link>
                     </div>
                     <div className={styles.tablediv}>
                         <table>
-                            <tr>
-                                <th>ID</th>
-                                <th>Category</th>
-                                <th>Parent Category</th>
-                                <th>Section</th>
-                                <th>Status</th>
-                                <th colSpan="2">Action</th>
-                            </tr>
-                            <tr>
-                                <td id={styles.id}>1</td>
-                                <td>T-Shirts</td>
-                                <td>Shirts</td>
-                                <td>Men</td>
-                                <td id={styles.active}>Active</td>
-                                <td id={styles.delete}><RiDeleteBin6Fill /></td>
-                                <td id={styles.edit}><RiEdit2Fill /></td>
-                            </tr>
-                            <tr>
-                                <td id={styles.id}>2</td>
-                                <td>T-Shirts</td>
-                                <td>Shirts</td>
-                                <td>Men</td>
-                                <td id={styles.inactive}>Inactive</td>
-                                <td id={styles.delete}><RiDeleteBin6Fill /></td>
-                                <td id={styles.edit}><RiEdit2Fill /></td>
-                            </tr>
-                            <tr>
-                                <td id={styles.id}>1</td>
-                                <td>T-Shirts</td>
-                                <td>Shirts</td>
-                                <td>Men</td>
-                                <td id={styles.active}>Active</td>
-                                <td id={styles.delete}><RiDeleteBin6Fill /></td>
-                                <td id={styles.edit}><RiEdit2Fill /></td>
-                            </tr>
-                            <tr>
-                                <td id={styles.id}>1</td>
-                                <td>T-Shirts</td>
-                                <td>Shirts</td>
-                                <td>Men</td>
-                                <td id={styles.active}>Active</td>
-                                <td id={styles.delete}><RiDeleteBin6Fill /></td>
-                                <td id={styles.edit}><RiEdit2Fill /></td>
-                            </tr>
-
-
+                            <tbody>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Category</th>
+                                    <th>Parent Category</th>
+                                    <th>Section</th>
+                                    <th>Status</th>
+                                    <th colSpan="2">Action</th>
+                                </tr>
+                                {category.categories.length > 0 ? (
+                                    category.categories.map((val) =>
+                                        <TableRow
+                                            id={val.id}
+                                            did={val.did}
+                                            name={val.name}
+                                            parentName={val.parentName}
+                                            status={val.status}
+                                            key={val.id}
+                                        />
+                                    )
+                                ) : (
+                                    <tr>
+                                        <td colSpan={6}>No data Found</td>
+                                    </tr>
+                                )}
+                            </tbody>
                         </table>
                     </div>
                 </div>
-
             </div>
         </>
     )

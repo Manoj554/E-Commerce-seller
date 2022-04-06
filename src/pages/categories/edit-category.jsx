@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Addcategories from '../../contents/Categories/AddCategories';
 import convertToBase64 from '../../helper/convertToBase64';
-import { addNewCategoryAction } from '../../redux/actions';
+import { editCategoryAction, getCategoryInfoAction } from '../../redux/actions';
 
 
-const AddNewCategory = () => {
-    const initialFormData = { categoryName: '', parentId: '', categoryImage: '' };
+const EditCategory = () => {
+    const initialFormData = { categoryName: '', parentId: '', categoryImage: '', id: '' };
     const [fileName, setFileName] = useState('');
     const [formData, setFormData] = useState(initialFormData);
     const dispatch = useDispatch();
+    const category = useSelector(state => state.category);
+    const router = useRouter();
+
+    useEffect(() => {
+        let { id } = router.query;
+        dispatch(getCategoryInfoAction(id));
+        const { _id, name, parentId, } = category.categoryInfo;
+        setFormData({ ...formData, categoryName: name, parentId: parentId, id: _id });
+    }, [router.query]);
 
     const handleFileUpload = async (e) => {
         let file = e.target.files[0];
@@ -20,7 +30,8 @@ const AddNewCategory = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(addNewCategoryAction(formData, setFormData, initialFormData));
+        // console.log(formData);
+        dispatch(editCategoryAction(formData));
     }
 
     return (
@@ -31,10 +42,10 @@ const AddNewCategory = () => {
                 formData={formData}
                 handleFileUpload={handleFileUpload}
                 handleSubmit={handleSubmit}
-                title="Add"
+                title="Edit"
             />
         </div>
     )
 }
 
-export default AddNewCategory;
+export default EditCategory;
