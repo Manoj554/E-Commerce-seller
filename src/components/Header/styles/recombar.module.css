@@ -27,6 +27,7 @@
 	font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 	border-radius: 3px;
 	padding: 10px 10px;
+	transition: 0.4s;
 }
 
 .searchdiv ul {
@@ -92,7 +93,7 @@
 }
 .adddiv button:hover{
 	background-color:rgb(16, 133, 211);
-	transition: 0.4s;
+	
 }
 
 
