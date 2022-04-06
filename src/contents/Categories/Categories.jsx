@@ -1,13 +1,16 @@
 import React from 'react'
 import styles from './categories.module.css'
 import { RiDeleteBin6Fill } from "react-icons/ri";
-import { RiEdit2Fill } from "react-icons/ri"
+import { RiEdit2Fill } from "react-icons/ri";
 
 const Categories = () => {
     return (
         <>
             <div className={styles.categoriesdiv}>
                 <div className={styles.container}>
+                    <div className={styles.heading}>
+                        <h1>Your Categories</h1>
+                    </div>
                     <div className={styles.buttondiv}>
                         <button>Add Category</button>
                     </div>
@@ -27,8 +30,8 @@ const Categories = () => {
                                 <td>Shirts</td>
                                 <td>Men</td>
                                 <td id={styles.active}>Active</td>
-                                <td id={styles.delete}><RiDeleteBin6Fill /></td>
-                                <td id={styles.edit}><RiEdit2Fill /></td>
+                                <td id={styles.delete}><button>Delete</button></td>
+                                <td id={styles.edit}><button>Edit</button></td>
                             </tr>
                             <tr>
                                 <td id={styles.id}>2</td>
@@ -36,8 +39,8 @@ const Categories = () => {
                                 <td>Shirts</td>
                                 <td>Men</td>
                                 <td id={styles.inactive}>Inactive</td>
-                                <td id={styles.delete}><RiDeleteBin6Fill /></td>
-                                <td id={styles.edit}><RiEdit2Fill /></td>
+                                <td id={styles.delete}><button>Delete</button></td>
+                                <td id={styles.edit}><button>Edit</button></td>
                             </tr>
                             <tr>
                                 <td id={styles.id}>1</td>
@@ -45,8 +48,8 @@ const Categories = () => {
                                 <td>Shirts</td>
                                 <td>Men</td>
                                 <td id={styles.active}>Active</td>
-                                <td id={styles.delete}><RiDeleteBin6Fill /></td>
-                                <td id={styles.edit}><RiEdit2Fill /></td>
+                                <td id={styles.delete}><button>Delete</button></td>
+                                <td id={styles.edit}><button>Edit</button></td>
                             </tr>
                             <tr>
                                 <td id={styles.id}>1</td>
@@ -54,11 +57,9 @@ const Categories = () => {
                                 <td>Shirts</td>
                                 <td>Men</td>
                                 <td id={styles.active}>Active</td>
-                                <td id={styles.delete}><RiDeleteBin6Fill /></td>
-                                <td id={styles.edit}><RiEdit2Fill /></td>
+                                <td id={styles.delete}><button>Delete</button></td>
+                                <td id={styles.edit}><button>Edit</button></td>
                             </tr>
-
-
                         </table>
                     </div>
                 </div>
@@ -68,4 +69,4 @@ const Categories = () => {
     )
 }
 
-export default Categories
+export default Categories;

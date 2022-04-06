@@ -1,0 +1,152 @@
+.container
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 9vh;
+    grid-column-gap: 2vw;
+    margin: 1.5%;
+}
+.Products{
+    background-color: rgb(249, 85, 85);
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+    padding: 12px 0; 
+    box-shadow: 3px 0px 6px 0px rgba(146, 142, 142, 0.75);
+}
+.Products span{
+    float: left;
+    padding: 1.5px 0px 1.5px 15px;
+}
+.Products:hover{
+    cursor: pointer;
+    background-color: rgb(243, 20, 20);
+}
+.Users{
+    background-color: rgb(25, 207, 220);
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+    padding: 12px 0;  
+    box-shadow: 3px 0px 6px 0px rgba(146, 142, 142, 0.75);
+}
+.Users span{
+    float: left;
+    padding: 1.5px 0px 1.5px 15px;
+}
+.Users:hover{
+    cursor: pointer;
+    background-color: rgb(40, 137, 216);
+}
+.PendingOrders{
+    background-color: rgb(191, 67, 228);
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+    padding: 12px 0;  
+    box-shadow: 3px 0px 6px 0px rgba(146, 142, 142, 0.75);
+}
+.PendingOrders span{
+    float: left;
+    padding: 1.5px 0px 1.5px 15px;
+}
+.PendingOrders:hover{
+    cursor: pointer;
+    background-color: rgb(141, 12, 181);
+}
+.TotalOrders{
+    background-color: rgb(157, 228, 43);
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+    padding: 12px 0; 
+    box-shadow: 3px 0px 6px 0px rgba(146, 142, 142, 0.75); 
+}
+.TotalOrders span{
+    float: left;
+    padding: 1.5px 0px 1.5px 15px;
+}
+.TotalOrders:hover{
+    cursor: pointer;
+    background-color: rgb(60, 209, 15);
+}
+.TotalProfit{
+    background-color: rgb(238, 94, 202);
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+    padding: 12px 0;
+    box-shadow: 3px 0px 6px 0px rgba(146, 142, 142, 0.75);  
+}
+.TotalProfit span{
+    float: left;
+    padding: 1.5px 0px 1.5px 15px;
+}
+.TotalProfit:hover{
+    cursor: pointer;
+    background-color: rgb(234, 18, 180);
+}
+
+.container2
+{
+    display: grid;
+    grid-template-columns: 60vw auto;
+    grid-template-rows: 90vh;
+    grid-column-gap: 2vw;
+    margin: 1.5%;
+}
+.Graph{
+    background-color: rgb(229, 236, 237);
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.RecentBuyers{
+    background-color: rgb(229, 236, 237);
+    text-align: left;
+    border-radius: 5px;
+    padding-left: 4%;
+    position: static;
+}
+.heading{
+    margin: 20px 20px 20px 20px ;
+    font-weight: 600;
+}
+.reload{
+    margin: -18px 15px 10px 10px;
+    place-content: right;
+    position: relative;
+    top: -3.5%; left: 85%;
+}
+.reload:hover{
+    color: rgb(102, 100, 100);
+}
+.Buyer{
+    text-align: left;
+}
+.Buyer img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    float:left;
+    object-fit: fill;
+    margin: -1% 5% 2% 2%;
+}
+.Buyer p{
+    margin: 6% 0% 1.5% 0%;
+}
+.buyeritem1{
+    background-color: red;
+    border-radius: 5px;
+    margin-right: 3%;
+}
+.buyeritem2{
+    background-color: greenyellow;
+    border-radius: 5px;
+}
+.Buyerbill{
+    margin-top: 1%;
+}
+
+

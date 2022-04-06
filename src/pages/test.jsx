@@ -4,21 +4,18 @@ import Card from '../components/Card/Card';
 import Categories from '../contents/Categories/Categories';
 import Addcategories from '../contents/Categories/Addcategories';
 import Addproducts from '../contents/Products/Addproducts';
+import Productdesc from '../contents/Products/Productdesc';
+
 
 const test = () => {
     const [file, setFile] = useState('');
     return (
         <div>
-<<<<<<< HEAD
-    <FileBase64
-        multiple={false}
-        onDone={(base) => setFile(base)}
-    />
-    { console.log(file) }
-=======
-           <Addproducts/>
-            <Addcategories/>
->>>>>>> 2d03b14db0908f52e34681024586d81e56efd2ec
+
+            <Productdesc />
+            <Categories />
+            <Addproducts />
+            <Addcategories />
         </div >
 
     )

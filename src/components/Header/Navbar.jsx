@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
         <>
             <div className={style.maindiv}>
-                <div className={style.contentlogo}><img src="logo5.png" /></div>
+                <div className={style.contentlogo}><img src="/logo5.png" /></div>
                 <div className={style.spacediv}>
                     <ul className={style.navcontent}>
                         <li>
