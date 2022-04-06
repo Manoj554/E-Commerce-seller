@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles/recombar.module.css';
+import Link from 'next/link';
 import { GoSearch } from 'react-icons/go';
 
 const Recombar = () => {
@@ -7,7 +8,9 @@ const Recombar = () => {
 		<>
 			<div className={styles.recombardiv}>
 				<div className={styles.adddiv}>
-					<button>+ Add products</button>
+					<Link href="/products/add-new-product">
+						<button>+ Add products</button>
+					</Link>
 				</div>
 				<div className={styles.searchdiv}>
 					<ul>
