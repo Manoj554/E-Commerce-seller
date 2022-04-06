@@ -11,6 +11,9 @@ const Categories = () => {
         <>
             <div className={styles.categoriesdiv}>
                 <div className={styles.container}>
+                    <div className={styles.heading}>
+                        <h1>Your Categories</h1>
+                    </div>
                     <div className={styles.buttondiv}>
                         <Link href="/categories/add-new-category">
                             <button>Add Category</button>
@@ -52,4 +55,4 @@ const Categories = () => {
     )
 }
 
-export default Categories
+export default Categories;

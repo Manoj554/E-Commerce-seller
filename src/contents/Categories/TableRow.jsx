@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './categories.module.css';
-import { RiDeleteBin6Fill, RiEdit2Fill } from "react-icons/ri";
-import { AiFillDelete } from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { deleteCategoryAction } from '../../redux/actions';
 import Link from 'next/link';
@@ -34,4 +32,4 @@ const TableRow = ({ id, did, name, parentName, status }) => {
     );
 }
 
-export default TableRow
+export default TableRow;

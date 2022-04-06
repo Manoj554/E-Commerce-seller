@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={style.copyright}>
-                    <p>All rights reserved &copy; 2022 - CartAny</p>
+                    <p>All rights reserved &copy; 2022 - Cartany</p>
                     <ul className={style.socialmedia}>
                         <li>
                             <FaFacebookF />
