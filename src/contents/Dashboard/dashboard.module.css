@@ -30,7 +30,6 @@
     background-color: rgb(243, 20, 20);
 }
 .Users{
-    /* background:linear-gradient(90deg, rgba(241, 6, 148, 1) 16%, rgba(192, 49, 255, 1) 100%); */
     background-image: linear-gradient(to right,rgb(204, 0, 82), rgb(255, 26, 117),rgb(255, 179, 209));
     text-align: center;
     border-radius: 7px;
@@ -148,7 +147,7 @@
     margin: 6% 0% 1.5% 0%;
 }
 .buyeritem1{
-    background-color: red;
+    background-color: rgb(157, 243, 246);
     border-radius: 5px;
     margin-right: 3%;
 }

@@ -7,7 +7,6 @@ const BarGraph = (props) => {
     let barArray = []
     Object.keys(data).forEach((key) => {
         barArray.push(
-            // <Bar label={key} fill={'blue'} height={`${(data[key] / sum(Object.values(data)))*100}vw`}/>
             <Bar label={key} height={`${(data[key] / sum(Object.values(data)))*100}vw`}/>
         )
     })
