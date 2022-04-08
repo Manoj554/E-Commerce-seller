@@ -1,18 +1,20 @@
-.maincontainer {
-    width: 100%;
+.maincontainer{
+    width:100%;
     overflow: hidden;
 }
-
-.container {
+.container
+{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: 9vh;
+    grid-template-rows: auto;
     grid-column-gap: 2vw;
     margin: 1.5%;
+    flex: 1;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
 }
-
-.Products {
-    background-color: rgb(249, 85, 85);
+.Products{
+    background:linear-gradient(90deg, rgba(0, 83, 255, 1) 0%, rgba(0, 212, 201, 1) 68%, rgba(119, 247, 245, 1) 100%);
     text-align: center;
     border-radius: 7px;
     color: white;
@@ -29,9 +31,8 @@
     cursor: pointer;
     background-color: rgb(243, 20, 20);
 }
-
-.Users {
-    background-color: rgb(25, 207, 220);
+.Users{
+    background-image: linear-gradient(to right,rgb(204, 0, 82), rgb(255, 26, 117),rgb(255, 179, 209));
     text-align: center;
     border-radius: 7px;
     color: white;
@@ -48,9 +49,8 @@
     cursor: pointer;
     background-color: rgb(40, 137, 216);
 }
-
-.PendingOrders {
-    background-color: rgb(191, 67, 228);
+.PendingOrders{
+    background-image: linear-gradient(to right,rgb(0, 153, 0), rgb(0, 255, 0),rgb(128, 255, 128));
     text-align: center;
     border-radius: 7px;
     color: white;
@@ -67,9 +67,8 @@
     cursor: pointer;
     background-color: rgb(141, 12, 181);
 }
-
-.TotalOrders {
-    background-color: rgb(157, 228, 43);
+.TotalOrders{
+    background:linear-gradient(90deg, rgba(156, 39, 176, 1) 7%, rgba(49, 220, 255, 1) 100%);
     text-align: center;
     border-radius: 7px;
     color: white;
@@ -86,9 +85,8 @@
     cursor: pointer;
     background-color: rgb(60, 209, 15);
 }
-
-.TotalProfit {
-    background-color: rgb(238, 94, 202);
+.TotalProfit{
+    background:linear-gradient(90deg, rgba(238, 21, 5, 1) 7%, rgba(255, 222, 49, 1) 100%);
     text-align: center;
     border-radius: 7px;
     color: white;
@@ -110,23 +108,25 @@
     display: grid;
     grid-template-columns: 60vw auto;
     grid-template-rows: 90vh;
-    grid-column-gap: 2vw;
+    grid-column-gap: 1vw;
     margin: 1.5%;
+    flex: 1;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
 }
-
-.Graph {
+.Graphcontainer{
     background-color: rgb(229, 236, 237);
     text-align: center;
-    border-radius: 5px;
-
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(194, 190, 190);
 }
-
-.RecentBuyers {
+.RecentBuyers{
     background-color: rgb(229, 236, 237);
     text-align: left;
-    border-radius: 5px;
     padding-left: 4%;
     position: static;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(194, 190, 190);
 }
 
 .heading {
@@ -162,9 +162,8 @@
 .Buyer p {
     margin: 6% 0% 1.5% 0%;
 }
-
-.buyeritem1 {
-    background-color: red;
+.buyeritem1{
+    background-color: rgb(157, 243, 246);
     border-radius: 5px;
     margin-right: 3%;
 }

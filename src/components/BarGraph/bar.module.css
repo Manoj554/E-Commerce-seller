@@ -1,0 +1,18 @@
+.bardiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 5px 5px -500px 5px;
+}
+.bardiv svg{
+    background-image: linear-gradient(to right, rgb(0, 128, 128), rgb(0, 179, 179),rgb(0, 255, 255));
+}
+.bardiv p{
+    text-align: center;
+}
+/* bargraph css */
+.bargraphdiv{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
