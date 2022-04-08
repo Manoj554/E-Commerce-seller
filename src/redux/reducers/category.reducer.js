@@ -88,6 +88,56 @@ const categoryReducer = (state = initialState, action) => {
                 categoryInfo: payload?.data
             }
             break;
+
+        //Delete Category 
+        case categoryConstraints.DELETE_CATEGORY_REQUEST:
+            state = {
+                ...state,
+                loading: true,
+            }
+            break;
+        case categoryConstraints.DELETE_CATEGORY_FAILED:
+            state = {
+                ...state,
+                loading: false,
+                message: null,
+                error: payload?.msg,
+            }
+            break;
+        case categoryConstraints.DELETE_CATEGORY_SUCCESS:
+            state = {
+                ...state,
+                loading: false,
+                error: null,
+                message: payload?.msg,
+                categories: payload?.data
+            }
+            break;
+
+        //Edit Category 
+        case categoryConstraints.EDIT_CATEGORY_REQUEST:
+            state = {
+                ...state,
+                loading: true,
+            }
+            break;
+        case categoryConstraints.EDIT_CATEGORY_FAILED:
+            state = {
+                ...state,
+                loading: false,
+                message: null,
+                error: payload?.msg,
+            }
+            break;
+        case categoryConstraints.EDIT_CATEGORY_SUCCESS:
+            state = {
+                ...state,
+                loading: false,
+                error: null,
+                message: payload?.msg,
+                categories: payload?.data
+            }
+            break;
         default:
     }
     return state;

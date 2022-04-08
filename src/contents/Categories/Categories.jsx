@@ -3,6 +3,7 @@ import styles from './categories.module.css';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import TableRow from './TableRow';
+import { Skeleton } from '@mui/material';
 
 const Categories = () => {
     const category = useSelector(state => state.category);
@@ -26,26 +27,41 @@ const Categories = () => {
                                     <th>ID</th>
                                     <th>Category</th>
                                     <th>Parent Category</th>
-                                    <th>Section</th>
                                     <th>Status</th>
                                     <th colSpan="2">Action</th>
                                 </tr>
-                                {category.categories.length > 0 ? (
-                                    category.categories.map((val) =>
-                                        <TableRow
-                                            id={val.id}
-                                            did={val.did}
-                                            name={val.name}
-                                            parentName={val.parentName}
-                                            status={val.status}
-                                            key={val.id}
-                                        />
-                                    )
-                                ) : (
+                                {category.loading ?
                                     <tr>
-                                        <td colSpan={6}>No data Found</td>
+                                        <td colSpan={6}>
+                                            <Skeleton height={40} />
+                                            <Skeleton />
+                                            <Skeleton height={150} />
+                                            <Skeleton /><Skeleton />
+                                            <Skeleton height={80} />
+                                            <Skeleton /><Skeleton />
+                                            <Skeleton /><Skeleton />
+
+                                        </td>
                                     </tr>
-                                )}
+                                    : (
+                                        category.categories.length > 0 ? (
+                                            category.categories.map((val) =>
+                                                <TableRow
+                                                    id={val.id}
+                                                    did={val.did}
+                                                    name={val.name}
+                                                    parentName={val.parentName}
+                                                    status={val.status}
+                                                    key={val.id}
+                                                />
+                                            )
+                                        ) : (
+                                            <tr>
+                                                <td colSpan={6}>No data Found</td>
+                                            </tr>
+                                        )
+                                    )}
+
                             </tbody>
                         </table>
                     </div>

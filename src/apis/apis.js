@@ -22,3 +22,7 @@ export const addNewProductApi = (product) => API.post('/product/add-new-product'
 
 export const getAllProductApi = () => API.get('/product/get-all-product');
 
+export const editProductApi = (product) => API.patch('/product/edit-product', product);
+
+export const deleteProductApi = (id) => API.delete(`/product/delete-product/${id}`);
+

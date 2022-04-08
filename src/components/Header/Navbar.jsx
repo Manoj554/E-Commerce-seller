@@ -3,22 +3,13 @@ import style from './styles/navbar.module.css';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { signOutAction } from '../../redux/actions';
-import { useRouter } from 'next/router';
 
 const Navbar = () => {
-    const auth = useSelector(state => state.auth);
     const dispatch = useDispatch();
-    const router = useRouter();
-
+    const auth = useSelector(state => state.auth);
     const handleLogout = () => {
         dispatch(signOutAction());
     }
-
-    useEffect(() => {
-        if (auth.authenticate) {
-            router.push('/');
-        }
-    }, [auth.authenticate]);
 
     return (
         <>
@@ -66,4 +57,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;

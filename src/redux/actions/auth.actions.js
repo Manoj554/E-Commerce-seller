@@ -51,7 +51,7 @@ export const userLoggedInStatus = () => async (dispatch) => {
 
     try {
         const { data } = await api.getUserInfoApi();
-        console.log(data);
+        // console.log(data);
         dispatch({ type: authConstraints.USER_LOGGEDIN });
     } catch (error) {
         signOutAction();

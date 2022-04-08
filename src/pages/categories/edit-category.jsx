@@ -1,25 +1,25 @@
+import axios from 'axios';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Addcategories from '../../contents/Categories/AddCategories';
 import convertToBase64 from '../../helper/convertToBase64';
-import { editCategoryAction, getCategoryInfoAction } from '../../redux/actions';
+import { editCategoryAction } from '../../redux/actions';
 
 
-const EditCategory = () => {
+const EditCategory = (props) => {
     const initialFormData = { categoryName: '', parentId: '', categoryImage: '', id: '' };
     const [fileName, setFileName] = useState('');
     const [formData, setFormData] = useState(initialFormData);
     const dispatch = useDispatch();
-    const category = useSelector(state => state.category);
     const router = useRouter();
 
     useEffect(() => {
-        let { id } = router.query;
-        dispatch(getCategoryInfoAction(id));
-        const { _id, name, parentId, } = category.categoryInfo;
-        setFormData({ ...formData, categoryName: name, parentId: parentId, id: _id });
-    }, [router.query]);
+        if (props.categoryInfo) {
+            const { _id, name, parentId, } = props.categoryInfo;
+            setFormData({ ...formData, categoryName: name, parentId: parentId, id: _id });
+        }
+    }, []);
 
     const handleFileUpload = async (e) => {
         let file = e.target.files[0];
@@ -30,8 +30,7 @@ const EditCategory = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log(formData);
-        dispatch(editCategoryAction(formData));
+        dispatch(editCategoryAction(formData, router));
     }
 
     return (
@@ -49,3 +48,23 @@ const EditCategory = () => {
 }
 
 export default EditCategory;
+
+export async function getServerSideProps(context) {
+    const id = context.query.id;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    try {
+        const { data } = await axios.get(`${baseUrl}/category/get-category-info/${id}`);
+        return {
+            props: {
+                categoryInfo: data.categoryInfo
+            },
+        }
+    } catch (error) {
+        console.log(error);
+    }
+    return {
+        props: {
+            categoryInfo: null
+        },
+    }
+}

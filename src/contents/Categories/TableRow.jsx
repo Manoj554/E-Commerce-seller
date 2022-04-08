@@ -16,16 +16,17 @@ const TableRow = ({ id, did, name, parentName, status }) => {
             <td className={styles.id}>{did}</td>
             <td>{name}</td>
             <td>{parentName}</td>
-            <td>Men</td>
             <td className={styles.inactive}>{status}</td>
-            <td>
+            <td className={styles.delete}>
                 <button value={id} onClick={handleDelete}>
-                    delete
+                    Delete
                 </button>
             </td>
             <td className={styles.edit}>
                 <Link as={`/categories/edit-category/${id}`} href={`/categories/edit-category?id=${id}`}>
-                    edit
+                    <button>
+                        Edit
+                    </button>
                 </Link>
             </td>
         </tr>

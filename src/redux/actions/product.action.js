@@ -6,10 +6,9 @@ export const addNewProductAction = (product, setFormData, defaultVal) => async (
 
     try {
         const { data } = await api.addNewProductApi(product);
-        console.log(data);
         alert(data.msg);
         setFormData(defaultVal);
-        dispatch({ type: productConstraints.ADD_NEW_PRODUCT_SUCCESS });
+        dispatch({ type: productConstraints.ADD_NEW_PRODUCT_SUCCESS, payload: { data: data.products, msg: data.msg } });
     } catch (error) {
         console.log(error.response);
         dispatch({ type: productConstraints.ADD_NEW_PRODUCT_FAILED });
@@ -28,14 +27,27 @@ export const getAllProductAction = () => async (dispatch) => {
     }
 }
 
-// export const deleteCategoryAction = (id) => async (dispatch) => {
-//     dispatch({ type: categoryConstraints.DELETE_CATEGORY_REQUEST });
+export const editProductAction = (product, router) => async (dispatch) => {
+    dispatch({ type: productConstraints.EDIT_PRODUCT_REQUEST });
 
-//     try {
-//         const { data } = await api.deleteCategoryApi(id);
-//         console.log(data);
-//         dispatch({ type: categoryConstraints.DELETE_CATEGORY_SUCCESS });
-//     } catch (error) {
-//         dispatch({ type: categoryConstraints.DELETE_CATEGORY_FAILED });
-//     }
-// }
+    try {
+        const { data } = await api.editProductApi(product);
+        alert(data.msg);
+        dispatch({ type: productConstraints.EDIT_PRODUCT_SUCCESS, payload: { data: data.products, msg: data.msg } });
+        router.push('/products');
+    } catch (error) {
+        console.log(error);
+        dispatch({ type: productConstraints.EDIT_PRODUCT_FAILED });
+    }
+}
+
+export const deleteProductAction = (id) => async (dispatch) => {
+    dispatch({ type: productConstraints.DELETE_PRODUCT_REQUEST });
+
+    try {
+        const { data } = await api.deleteProductApi(id);
+        dispatch({ type: productConstraints.DELETE_PRODUCT_SUCCESS, payload: { data: data.products, msg: data.msg } });
+    } catch (error) {
+        dispatch({ type: productConstraints.DELETE_PRODUCT_FAILED });
+    }
+}

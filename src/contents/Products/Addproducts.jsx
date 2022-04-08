@@ -1,16 +1,20 @@
 import React from 'react'
 import { FaCloudUploadAlt } from 'react-icons/fa'
 import { useSelector } from 'react-redux';
+import Loader from '../../components/Loader/Loader';
 import styles from './addproducts.module.css';
+import Link from 'next/link';
 
-const Addproducts = ({ handleSubmit, handleChange, formData, handleFiles, fileName }) => {
+const Addproducts = ({ handleSubmit, handleChange, formData, handleFiles, fileName, edit }) => {
     const { categories } = useSelector(state => state.category);
+    const product = useSelector(state => state.product);
     return (
         <>
+            {product.loading && <Loader />}
             <div className={styles.maindiv}>
                 <div className={styles.tablediv}>
                     <div className={styles.heading}>
-                        <h1>Add your products</h1>
+                        <h1>{edit ? 'Edit Your Product' : 'Add a New Product'}</h1>
                     </div>
                     <form onSubmit={handleSubmit}>
                         <div className={styles.tablecontainer}>
@@ -108,7 +112,9 @@ const Addproducts = ({ handleSubmit, handleChange, formData, handleFiles, fileNa
                         </div>
                         <div className={styles.submitbtn}>
                             <button type='submit' className={styles.submit}>Submit</button>
-                            <button type='button' className={styles.cancel}>Cancel</button>
+                            <Link href="/products">
+                                <button type='button' className={styles.cancel}>All Products</button>
+                            </Link>
                         </div>
 
                     </form>

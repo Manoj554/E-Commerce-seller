@@ -17,7 +17,7 @@ const Addcategories = ({ fileName, setFormData, formData, handleFileUpload, hand
             <div className={styles.maindiv}>
                 <div className={styles.tablediv}>
                     <div className={styles.heading}>
-                        <h1>{title} your Categories</h1>
+                        <h1>{title} your Category</h1>
                     </div>
 
                     <form onSubmit={handleSubmit}>
@@ -62,7 +62,7 @@ const Addcategories = ({ fileName, setFormData, formData, handleFileUpload, hand
                         <div className={styles.submitbtn}>
                             <button type='submit' className={styles.submit}>Submit</button>
                             <Link href="/categories">
-                                <button type='button' className={styles.cancel}>Cancel</button>
+                                <button type='button' className={styles.cancel}>Go to Categories</button>
                             </Link>
                         </div>
                     </form>

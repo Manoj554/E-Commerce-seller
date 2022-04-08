@@ -1,125 +1,139 @@
-.backimg{
-    /* background-image: url('/login_background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: top;
-    background-size: cover;
-    padding:30px 0 30px 0; */
-    position:relative;
+.backimg {
+    position: relative;
     background-image: url('/login_background.jpg');
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    padding:40px 0 40px 0;
-    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 0 40px 0;
+
 }
-.signinform{
+
+.signinform {
     background-color: #f9f9f9;
     margin: 0px auto 0px auto;
-    padding:30px;
-    width:32%;
+    padding: 30px;
+    width: 32%;
     min-width: 400px;
     border: 1px solid #b9b9b9;
     border-radius: 10px;
     box-shadow: 0px 3px 10px #7e7d7d;
-    
+
 }
-.maindiv{
+
+.maindiv {
     color: #696969;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:17px;
+    font-size: 17px;
     font-weight: 500;
 }
-.contentdiv{
-    padding:10px;
+
+.contentdiv {
+    padding: 10px;
 }
-.subcontent{
-    padding:0px;
+
+.subcontent {
+    padding: 0px;
 }
-.inptext{
-    width:100%;
+
+.inptext {
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
-    font-size:17px;
+    font-size: 17px;
     box-sizing: border-box;
 }
-.extradiv{
-    display:flex;
+
+.extradiv {
+    display: flex;
     flex-wrap: nowrap;
 }
-.spandiv{
 
-    width:50%;
+.spandiv {
+
+    width: 50%;
 }
-.spandiv input{
-    width:17px;
-    height:17px;
+
+.spandiv input {
+    width: 17px;
+    height: 17px;
 }
-.forgot{
-    text-align:right;
-    color:#039be5;
+
+.forgot {
+    text-align: right;
+    color: #039be5;
     text-decoration: underline;
 }
-.headmargin{
-    padding-bottom:10px;
+
+.headmargin {
+    padding-bottom: 10px;
 }
-.head{
-    color:#696969;
-    text-align:center;
+
+.head {
+    color: #696969;
+    text-align: center;
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
 }
-.buttonmargin{
-    margin:10px 0 10px 0;
+
+.buttonmargin {
+    margin: 10px 0 10px 0;
 }
-.googlemargin{
-    margin:10px 0 10px 0;
+
+.googlemargin {
+    margin: 10px 0 10px 0;
 }
-.button{
+
+.button {
     font-size: 17px;
-    border:none;
+    border: none;
     outline: none;
-    width:100%;
-    color:white;
+    width: 100%;
+    color: white;
     background-color: purple;
-    text-align:center;
+    text-align: center;
     border-radius: 4px;
-    padding:10px;
-    transition:0.4s;
+    padding: 10px;
+    transition: 0.4s;
 }
-.googlebtn{
+
+.googlebtn {
     background-color: rgb(196, 22, 22);
-    transition:0.4s;
+    transition: 0.4s;
 }
-.button:hover{
+
+.button:hover {
     cursor: pointer;
     background-color: rgb(160, 47, 160);
-    
+
 }
-.googlebtn:hover{
+
+.googlebtn:hover {
     background-color: rgb(218, 47, 47);
 }
-.helper{
+
+.helper {
     width: 100%;
     padding: 1rem 2rem;
     text-align: center;
 }
 
-.helper span{
+.helper span {
     color: #039be5;
     text-decoration: underline;
     cursor: pointer;
 }
-.helper span:hover{
+
+.helper span:hover {
     transform: translateX(2px)
-} 
-#googlelogo{
+}
+
+#googlelogo {
     font-size: 14px;
 }
