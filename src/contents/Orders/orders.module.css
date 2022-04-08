@@ -1,0 +1,100 @@
+.maindiv{
+    background-color: white;
+}
+.container {
+    flex: 1;
+    background-color: white;
+}
+.headercontent {
+    display: flex;
+    align-items: center;
+    padding: 16px 15px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+.headercontent li {
+    list-style: none;
+    margin: 0px 30px;
+    cursor: pointer;
+}
+.headercontent li a:hover{
+    padding: 26px 0 12px 0;
+    border-bottom: 4px solid rgb(13, 126, 240);
+    color: rgb(13, 126, 240);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.tablecontainer{
+    padding: 1.5%;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgb(194, 190, 190);
+    margin: 0px 10px 10px 10px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.tablecontainer table{
+    width: 100%;
+    text-align: left;
+    /* box-sizing: border-box; */
+}
+.tablecontainer table,.tablecontainer th ,.tablecontainer td
+{
+    border-collapse: collapse;
+    padding: 5px;
+}
+.tablecontainer tr{
+    border-bottom: 2px solid rgb(230, 230, 230);
+}
+.sortupicon{
+    float: right;
+    position: relative;
+    right: 20px;
+}
+.sortdownicon{
+    float: right;
+    position: relative;
+    right: 15px;
+}
+.sortupicon:hover{
+    color: rgb(201, 201, 208);
+    cursor: pointer;
+}
+.sortdownicon:hover{
+    color: rgb(201, 201, 208);
+    cursor: pointer;
+}
+.prdctimg img{
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-left: 2%;
+}
+.prdctimg span{
+    float: left;
+    margin:6% 0 0 8%;
+}
+.statusgreen{
+    color: rgb(37, 185, 37);
+    background-color: rgb(215, 248, 215);
+    padding: 5px;
+    width: 100px;
+    border-radius: 15px;
+    text-align: center;
+}
+.statusyellow{
+    color: rgb(221, 165, 9);
+    background-color: rgb(248, 248, 165);
+    padding: 5px;
+    width: 100px;
+    border-radius: 15px;
+    text-align: center;
+}
+.statusred{
+    color: rgb(222, 11, 11);
+    background-color: rgb(245, 186, 185);
+    padding: 5px;
+    width: 100px;
+    border-radius: 15px;
+    text-align: center;
+}

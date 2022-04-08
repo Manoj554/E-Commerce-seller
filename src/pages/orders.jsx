@@ -1,13 +1,13 @@
 import React from 'react';
 import PrivatePage from '../layout/PrivatePage';
+import Orders from '../contents/Orders/Orders';
 
-const Orders = () => {
+const orders = () => {
     return (
         <PrivatePage>
-            <div>This is Order page</div>
-
+            <Orders />
         </PrivatePage>
     )
 }
 
-export default Orders;
+export default orders;
