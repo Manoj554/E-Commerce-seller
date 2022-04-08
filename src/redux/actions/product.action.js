@@ -51,3 +51,28 @@ export const deleteProductAction = (id) => async (dispatch) => {
         dispatch({ type: productConstraints.DELETE_PRODUCT_FAILED });
     }
 }
+
+export const searchFieldAction = (query) => async (dispatch) => {
+    dispatch({ type: productConstraints.SEARCH_PRODUCT_REQUEST });
+
+    try {
+        const { data } = await api.searchProductApi(query);
+        dispatch({ type: productConstraints.SEARCH_PRODUCT_SUCCESS, payload: { data: data.products, msg: data.msg } });
+    } catch (error) {
+        dispatch({ type: productConstraints.SEARCH_PRODUCT_FAILED });
+    }
+}
+
+export const searchProductByCategoryAction = (id) => async (dispatch) => {
+    dispatch({ type: productConstraints.SEARCH_PRODUCT_BY_CATEGORY_REQUEST });
+    try {
+        const { data } = await api.searchProductByCategoryApi(id);
+        dispatch({
+            type: productConstraints.SEARCH_PRODUCT_BY_CATEGORY_SUCCESS, payload: {
+                data: data.products, msg: data.msg
+            }
+        });
+    } catch (error) {
+        dispatch({ type: productConstraints.SEARCH_PRODUCT_BY_CATEGORY_FAILED });
+    }
+}

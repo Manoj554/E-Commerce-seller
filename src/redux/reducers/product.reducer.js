@@ -2,6 +2,7 @@ import { productConstraints } from "../actions/actionConstraints";
 
 const initialState = {
     products: [],
+    searchedProduct: [],
     loading: false,
     error: null,
     message: null
@@ -109,6 +110,58 @@ const productReducer = (state = initialState, action) => {
                 error: null,
                 message: payload?.msg,
                 products: payload?.data
+            }
+            break;
+
+        //Search Product
+        case productConstraints.SEARCH_PRODUCT_REQUEST:
+            state = {
+                ...state,
+                loading: true
+            }
+            break;
+        case productConstraints.SEARCH_PRODUCT_FAILED:
+            state = {
+                ...state,
+                loading: false,
+                message: null,
+                error: payload?.msg,
+                searchedProduct: []
+            }
+            break;
+        case productConstraints.SEARCH_PRODUCT_SUCCESS:
+            state = {
+                ...state,
+                loading: false,
+                error: null,
+                message: payload?.msg,
+                searchedProduct: payload?.data
+            }
+            break;
+
+        //Search Product By Category
+        case productConstraints.SEARCH_PRODUCT_BY_CATEGORY_REQUEST:
+            state = {
+                ...state,
+                loading: true
+            }
+            break;
+        case productConstraints.SEARCH_PRODUCT_BY_CATEGORY_FAILED:
+            state = {
+                ...state,
+                loading: false,
+                message: null,
+                error: payload?.msg,
+                searchedProduct: []
+            }
+            break;
+        case productConstraints.SEARCH_PRODUCT_BY_CATEGORY_SUCCESS:
+            state = {
+                ...state,
+                loading: false,
+                error: null,
+                message: payload?.msg,
+                searchedProduct: payload?.data
             }
             break;
 

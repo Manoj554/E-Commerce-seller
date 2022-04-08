@@ -26,3 +26,7 @@ export const editProductApi = (product) => API.patch('/product/edit-product', pr
 
 export const deleteProductApi = (id) => API.delete(`/product/delete-product/${id}`);
 
+export const searchProductApi = (query) => API.get(`/product/query-search?query=${query}`);
+
+export const searchProductByCategoryApi = (id) => API.get(`/product/get-product-bycategory/${id}`);
+

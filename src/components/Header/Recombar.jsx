@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './styles/recombar.module.css';
 import Link from 'next/link';
 import { GoSearch } from 'react-icons/go';
+import { useDispatch, useSelector } from 'react-redux';
+import { searchFieldAction, searchProductByCategoryAction } from '../../redux/actions';
 
 const Recombar = () => {
+	const category = useSelector(state => state.category);
+	const [searchField, setSearrchField] = useState('');
+	const [searchByCategory, setSearchByCategory] = useState('');
+	const dispatch = useDispatch();
+
+	const handleSetCategory = (e) => {
+		setSearchByCategory(e.target.value);
+		if (e.target.value !== '') {
+			dispatch(searchProductByCategoryAction(e.target.value));
+		}
+	}
+
+	useEffect(() => {
+		if (searchField.length >= 3) {
+			dispatch(searchFieldAction(searchField));
+		}
+		if (searchField.length == 0) {
+			dispatch(searchFieldAction(searchField));
+		}
+	}, [searchField]);
 	return (
 		<>
 			<div className={styles.recombardiv}>
@@ -17,17 +39,22 @@ const Recombar = () => {
 						<li >
 							<div className={styles.searchbox}>
 								<button ><GoSearch /></button>
-								<input type="search" placeholder="Search for products and brands" name="search" />
+								<input type="search"
+									placeholder="Search for products and brands"
+									name="search"
+									value={searchField}
+									onChange={(e) => setSearrchField(e.target.value)}
+								/>
 							</div>
 						</li>
 						<li >
-							<select name="sortby">
-								<option>Sort By: Recommemded</option>
-								<option>Category - 1</option>
-								<option>Category - 2</option>
-								<option>Category - 3</option>
-								<option>Category - 4</option>
-								<option>Category - 5</option>
+							<select value={searchByCategory} onChange={handleSetCategory} name="sortby">
+								<option value={''}>Sort By: Recommemded</option>
+								{category.categories.length > 0 && (
+									category.categories.map((val) => (
+										<option key={val.id} value={val.id}>{val.name}</option>
+									))
+								)}
 							</select>
 						</li>
 					</ul>

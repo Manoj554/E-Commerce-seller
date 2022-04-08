@@ -14,7 +14,8 @@ const PrivatePage = ({ children }) => {
 
     const validateToken = async () => {
         try {
-            const { data } = await axios.get('/api/getcookie');
+            const { data } = await axios.get('/api/getcookie');// 1
+
             if (data.token) {
                 const { exp } = jwtDecode(data.token);
                 const limit = Math.round(new Date().getTime() / 1000);

@@ -9,6 +9,7 @@ import Productdesc from '../contents/Products/Productdesc';
 
 const test = () => {
     const [file, setFile] = useState('');
+
     return (
         <div>
 
