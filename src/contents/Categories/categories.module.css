@@ -99,6 +99,10 @@
     color: rgb(235, 10, 10)
 }
 
+.active {
+    color: rgb(93, 168, 17)
+}
+
 .delete button,
 .edit button {
     color: white;
@@ -125,4 +129,9 @@
 .edit button:hover {
     background-color: rgb(18, 121, 206);
 
+}
+
+.rootCategory {
+    font-weight: bold;
+    color: rgb(248, 13, 13);
 }

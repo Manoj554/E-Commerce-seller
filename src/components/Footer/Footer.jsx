@@ -2,6 +2,7 @@ import React from 'react';
 import FooterBox from './FooterBox';
 import style from './styles/footer.module.css';
 import { FaLinkedinIn, FaTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import { footerData } from '../../utils/staticData/footer';
 
 const Footer = () => {
     return (
@@ -17,9 +18,9 @@ const Footer = () => {
                             <p className={style.text}>Cart Anything - Bringing the art to the cart.</p>
                         </div>
                         <div className={style.right}>
-                            <FooterBox />
-                            <FooterBox />
-                            <FooterBox />
+                            {footerData.length > 0 && footerData.map((val) => {
+                                return <FooterBox title={val.title} contents={val.contents} />
+                            })}
                         </div>
                     </div>
                 </div>

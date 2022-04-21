@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
     return (
         <div>
             <Nprogress
-                height={7}
+                height={3}
             />
             <Navbar />
             {children}

@@ -13,9 +13,13 @@ const AddNewCategory = () => {
 
     const handleFileUpload = async (e) => {
         let file = e.target.files[0];
-        let fileInfo = await convertToBase64(file);
-        setFormData({ ...formData, categoryImage: fileInfo.base64 });
-        setFileName(fileInfo.name);
+        if (file) {
+            let fileInfo = await convertToBase64(file);
+            setFormData({ ...formData, categoryImage: fileInfo.base64 });
+            setFileName(fileInfo.name);
+        } else {
+            e.target.value = null;
+        }
     }
 
     const handleSubmit = (e) => {

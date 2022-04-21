@@ -12,24 +12,34 @@ const TableRow = ({ id, did, name, parentName, status }) => {
     }
 
     return (
-        <tr key={id}>
-            <td className={styles.id}>{did}</td>
-            <td>{name}</td>
-            <td>{parentName}</td>
-            <td className={styles.inactive}>{status}</td>
-            <td className={styles.delete}>
-                <button value={id} onClick={handleDelete}>
-                    Delete
-                </button>
-            </td>
-            <td className={styles.edit}>
-                <Link as={`/categories/edit-category/${id}`} href={`/categories/edit-category?id=${id}`}>
-                    <button>
-                        Edit
+        parentName === 'root' ? (
+            <tr key={id} className={styles.rootCategory}>
+                <td className={styles.id}>{did}</td>
+                <td>{name}</td>
+                <td style={{ color: 'blue' }}>{parentName}</td>
+                <td className={styles.active}>{status}</td>
+                <td colSpan={2}>Access denied</td>
+            </tr>
+        ) : (
+            <tr key={id}>
+                <td className={styles.id}>{did}</td>
+                <td>{name}</td>
+                <td>{parentName}</td>
+                <td className={styles.inactive}>{status}</td>
+                <td className={styles.delete}>
+                    <button value={id} onClick={handleDelete}>
+                        Delete
                     </button>
-                </Link>
-            </td>
-        </tr>
+                </td>
+                <td className={styles.edit}>
+                    <Link as={`/categories/edit-category/${id}`} href={`/categories/edit-category?id=${id}`}>
+                        <button>
+                            Edit
+                        </button>
+                    </Link>
+                </td>
+            </tr>
+        )
     );
 }
 

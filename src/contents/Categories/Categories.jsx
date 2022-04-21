@@ -45,10 +45,10 @@ const Categories = () => {
                                     </tr>
                                     : (
                                         category.categories.length > 0 ? (
-                                            category.categories.map((val) =>
+                                            category.categories.map((val, index) =>
                                                 <TableRow
                                                     id={val.id}
-                                                    did={val.did}
+                                                    did={index + 1}
                                                     name={val.name}
                                                     parentName={val.parentName}
                                                     status={val.status}
