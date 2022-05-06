@@ -19,7 +19,7 @@ const Footer = () => {
                         </div>
                         <div className={style.right}>
                             {footerData.length > 0 && footerData.map((val) => {
-                                return <FooterBox title={val.title} contents={val.contents} />
+                                return <FooterBox key={val} title={val.title} contents={val.contents} />
                             })}
                         </div>
                     </div>

@@ -3,25 +3,29 @@ import style from './styles/navbar.module.css';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { signOutAction } from '../../redux/actions';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
-    const dispatch = useDispatch();
     const auth = useSelector(state => state.auth);
+    const dispatch = useDispatch();
+    const router = useRouter();
+
     const handleLogout = () => {
         dispatch(signOutAction());
     }
 
+    useEffect(() => {
+        if (auth.authenticate) {
+            router.push('/');
+        }
+    }, [auth.authenticate]);
+
     return (
         <>
             <div className={style.maindiv}>
-                <div className={style.contentlogo}><img src="/logo5.png" /></div>
+                <div className={style.contentlogo}><img src="logo5.png" /></div>
                 <div className={style.spacediv}>
                     <ul className={style.navcontent}>
-                        <li>
-                            <Link href="/dashboard">
-                                <a>Dashboard</a>
-                            </Link>
-                        </li>
                         <li>
                             <Link href="/orders">
                                 <a>Orders</a>
@@ -35,6 +39,11 @@ const Navbar = () => {
                         <li>
                             <Link href="/products">
                                 <a>Products</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/users">
+                                <a>My users</a>
                             </Link>
                         </li>
                     </ul>
@@ -57,4 +66,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default Navbar
