@@ -18,8 +18,8 @@ const Footer = () => {
                             <p className={style.text}>Cart Anything - Bringing the art to the cart.</p>
                         </div>
                         <div className={style.right}>
-                            {footerData.length > 0 && footerData.map((val) => {
-                                return <FooterBox key={val} title={val.title} contents={val.contents} />
+                            {footerData.length > 0 && footerData.map((val, i) => {
+                                return <FooterBox key={val + i} title={val.title} contents={val.contents} />
                             })}
                         </div>
                     </div>

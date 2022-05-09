@@ -1,16 +1,18 @@
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllCategoriesAction, getAllProductAction, signOutAction } from '../redux/actions';
+import { getAllCategoriesAction, getAllOrders, getAllProductAction, signOutAction } from '../redux/actions';
 import jwtDecode from 'jwt-decode';
 
 const PrivatePage = ({ children }) => {
     const router = useRouter();
+    const [pageState, setPageState] = useState(false);
     const dispatch = useDispatch();
     const auth = useSelector(state => state.auth);
     const category = useSelector(state => state.category);
     const product = useSelector(state => state.product);
+    const order = useSelector(state => state.order);
 
     const validateToken = async () => {
         try {
@@ -32,19 +34,26 @@ const PrivatePage = ({ children }) => {
 
     useEffect(async () => {
         if (!(await validateToken())) {
-            router.push('/signin');
+            setPageState(false);
+            return router.push('/signin');
         }
-        if (auth.authenticate && category.categories.length == 0) {
-            dispatch(getAllCategoriesAction());
-        }
-        if (auth.authenticate && product.products.length == 0) {
-            dispatch(getAllProductAction());
+        setPageState(true);
+        if (auth.authenticate) {
+            if (category.categories.length == 0) {
+                dispatch(getAllCategoriesAction());
+            }
+            if (product.products.length == 0) {
+                dispatch(getAllProductAction());
+            }
+            if (order.orders.length == 0) {
+                dispatch(getAllOrders());
+            }
         }
     }, [auth.authenticate, category.categories.length]);
 
     return (
         <>
-            {children}
+            {pageState && children}
         </>
     )
 }

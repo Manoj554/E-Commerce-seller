@@ -7,13 +7,11 @@ export const signUpAction = (userData, setState, defaultValue, router) => async 
 
     try {
         const { data } = await api.signUpApi(userData);
-        alert(data.msg);
         setState(defaultValue);
         dispatch({ type: authConstraints.SIGNUP_SUCCESS, payload: data.msg });
         router.push('/signin');
     } catch (error) {
-        let err = error.response.data.msg;
-        dispatch({ type: authConstraints.SIGNUP_FAILED, payload: err });
+        dispatch({ type: authConstraints.SIGNUP_FAILED });
     }
 }
 
@@ -23,12 +21,10 @@ export const signInAction = (userData, setState, defaultValue) => async (dispatc
     try {
         const { data } = await api.signInApi(userData);
         await axios.post('/api/login', { token: data.user.token });
-        alert(data.msg);
         setState({ user: '', password: '' });
         dispatch({ type: authConstraints.SIGNIN_SUCCESS, payload: data.msg });
     } catch (error) {
-        let err = error.response.data.msg;
-        dispatch({ type: authConstraints.SIGNIN_FAILED, payload: err });
+        dispatch({ type: authConstraints.SIGNIN_FAILED });
     }
 }
 
@@ -38,11 +34,9 @@ export const signOutAction = () => async (dispatch) => {
     try {
         const { data } = await api.signOutApi();
         await axios.get('/api/logout');
-        alert(data.msg);
         dispatch({ type: authConstraints.SIGNOUT_SUCCESS });
     } catch (error) {
-        let err = error.response.data.msg;
-        dispatch({ type: authConstraints.SIGNOUT_FAILED, payload: err });
+        dispatch({ type: authConstraints.SIGNOUT_FAILED });
     }
 }
 
@@ -51,7 +45,6 @@ export const userLoggedInStatus = () => async (dispatch) => {
 
     try {
         const { data } = await api.getUserInfoApi();
-        // console.log(data);
         dispatch({ type: authConstraints.USER_LOGGEDIN });
     } catch (error) {
         signOutAction();

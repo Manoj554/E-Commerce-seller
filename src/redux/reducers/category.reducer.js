@@ -5,7 +5,8 @@ const initialState = {
     loading: false,
     error: null,
     message: null,
-    categoryInfo: {}
+    categoryInfo: {},
+    userscategory: false
 };
 
 const categoryReducer = (state = initialState, action) => {
@@ -59,7 +60,35 @@ const categoryReducer = (state = initialState, action) => {
                 loading: false,
                 error: null,
                 message: payload?.msg,
-                categories: payload?.data
+                categories: payload?.data,
+                userscategory: false
+            }
+            break;
+
+        //GET Category BY USER
+        case categoryConstraints.GET_CATEGORY_BELONG_TO_USER_REQUEST:
+            state = {
+                ...state,
+                loading: true
+            }
+            break;
+        case categoryConstraints.GET_CATEGORY_BELONG_TO_USER_FAILED:
+            state = {
+                ...state,
+                loading: false,
+                message: null,
+                error: payload?.msg,
+                categories: []
+            }
+            break;
+        case categoryConstraints.GET_CATEGORY_BELONG_TO_USER_SUCCESS:
+            state = {
+                ...state,
+                loading: false,
+                error: null,
+                message: payload?.msg,
+                categories: payload?.data,
+                userscategory: true
             }
             break;
 

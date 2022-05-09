@@ -1,16 +1,21 @@
 import React from 'react'
 import Link from 'next/link';
-import {FaSortUp} from 'react-icons/fa';
-import {FaSortDown} from 'react-icons/fa';
+import { FaSortUp } from 'react-icons/fa';
+import { FaSortDown } from 'react-icons/fa';
 import styles from './orders.module.css';
+import { useSelector } from 'react-redux';
+import Loader from '../../components/Loader/Loader';
+
 const Orders = () => {
+    const { loading, orders } = useSelector(state => state.order);
+
     return (
         <div className={styles.maindiv}>
             <div className={styles.container}>
                 <ul className={styles.headercontent}>
                     <li id={styles.allorders}>
                         {/* <Link href="/allorders"> */}
-                            <a>All orders</a>
+                        <a>All orders</a>
                         {/* </Link> */}
                     </li>
                     <li>
@@ -30,47 +35,59 @@ const Orders = () => {
                     </li>
                 </ul>
             </div>
+            {loading && <Loader />}
             <div className={styles.tablecontainer}>
                 <table>
-                    <tr>
-                        <th>
-                            Serial No:
-                            <div className={styles.sortupicon}><FaSortUp /></div>
-                            <div className={styles.sortdownicon}><FaSortDown /></div>
-                        </th>
-                        <th>
-                            Order ID
-                            <div className={styles.sortupicon}><FaSortUp /></div>
-                            <div className={styles.sortdownicon}><FaSortDown /></div>
-                        </th>
-                        <th>
-                            Product Name
-                            <div className={styles.sortupicon}><FaSortUp /></div>
-                            <div className={styles.sortdownicon}><FaSortDown /></div>
-                        </th>
-                        <th>
-                            Address
-                            <div className={styles.sortupicon}><FaSortUp /></div>
-                            <div className={styles.sortdownicon}><FaSortDown /></div>
-                        </th>
-                        <th>
-                            Date
-                            <div className={styles.sortupicon}><FaSortUp /></div>
-                            <div className={styles.sortdownicon}><FaSortDown /></div>
-                        </th>
-                        <th>
-                            Price
-                            <div className={styles.sortupicon}><FaSortUp /></div>
-                            <div className={styles.sortdownicon}><FaSortDown /></div>
-                        </th>
-                        <th>
-                            Status
-                            <div className={styles.sortupicon}><FaSortUp /></div>
-                            <div className={styles.sortdownicon}><FaSortDown /></div>
+                    <thead>
+                        <tr>
+                            <th>
+                                Serial No:
+                            </th>
+                            <th>
+                                Order ID
+                            </th>
+                            <th>
+                                Product Name & Quantity
+                            </th>
+                            <th>
+                                Address
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th>
+                                Status
 
-                        </th>
-                    </tr>
-                    <tr className={styles.rowcontainer}>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {orders.length > 0 && (
+                            orders.map((val, index) => (
+                                <tr key={val.id} className={styles.rowcontainer}>
+                                    <td id={styles.SerialNo}>{index + 1}</td>
+                                    <td id={styles.OrderID}>{val.orderId}</td>
+                                    <td id={styles.ProductName}>
+                                        {
+                                            val.productDetails.map((pd) => {
+                                                return (
+                                                    pd.productName + ' X ' + pd.qty + ', '
+                                                )
+                                            })
+                                        }
+                                    </td>
+                                    <td>{val.deliveryAddress?.address}</td>
+                                    <td>{val.date}</td>
+                                    <td>₹ {val.orderAmount}</td>
+                                    <td><div className={styles.statusgreen}>{val.orderStatus}</div></td>
+                                </tr>
+                            ))
+                        )}
+                    </tbody>
+                    {/* <tr className={styles.rowcontainer}>
                         <td id={styles.SerialNo}>1</td>
                         <td id={styles.OrderID}>RHFA2547851</td>
                         <td id={styles.ProductName}>
@@ -111,7 +128,7 @@ const Orders = () => {
                         <td>20/03/2021</td>
                         <td>Rs. 376.25</td>
                         <td><div className={styles.statusred}>Cancelled</div></td>
-                    </tr>
+                    </tr> */}
                 </table>
             </div>
         </div>

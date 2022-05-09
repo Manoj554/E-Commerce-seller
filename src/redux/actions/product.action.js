@@ -6,7 +6,6 @@ export const addNewProductAction = (product, setFormData, defaultVal) => async (
 
     try {
         const { data } = await api.addNewProductApi(product);
-        alert(data.msg);
         setFormData(defaultVal);
         dispatch({ type: productConstraints.ADD_NEW_PRODUCT_SUCCESS, payload: { data: data.products, msg: data.msg } });
     } catch (error) {
@@ -20,7 +19,6 @@ export const getAllProductAction = () => async (dispatch) => {
 
     try {
         const { data } = await api.getAllProductApi();
-        console.log(data);
         dispatch({ type: productConstraints.GET_ALL_PRODUCT_SUCCESS, payload: { data: data.products, msg: data.msg } });
     } catch (error) {
         dispatch({ type: productConstraints.GET_ALL_PRODUCT_FAILED, payload: { msg: error?.response.data.msg } });
@@ -32,7 +30,6 @@ export const editProductAction = (product, router) => async (dispatch) => {
 
     try {
         const { data } = await api.editProductApi(product);
-        alert(data.msg);
         dispatch({ type: productConstraints.EDIT_PRODUCT_SUCCESS, payload: { data: data.products, msg: data.msg } });
         router.push('/products');
     } catch (error) {

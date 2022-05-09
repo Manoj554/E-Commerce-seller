@@ -6,12 +6,9 @@ export const addNewCategoryAction = (category, setFormData, defaultVal) => async
 
     try {
         const { data } = await api.addNewCategoryApi(category);
-        // console.log(data);
-        alert(data.msg);
         setFormData(defaultVal);
         dispatch({ type: categoryConstraints.ADD_NEW_CATEGORY_SUCCESS, payload: { data: data.categories, msg: data.msg } });
     } catch (error) {
-        console.log(error.response);
         dispatch({ type: categoryConstraints.ADD_NEW_CATEGORY_FAILED });
     }
 }
@@ -21,10 +18,9 @@ export const getAllCategoriesAction = () => async (dispatch) => {
 
     try {
         const { data } = await api.getAllCategoriesApi();
-        // console.log(data);
         dispatch({ type: categoryConstraints.GET_ALL_CATEGORY_SUCCESS, payload: { data: data.categories, msg: data.msg } });
     } catch (error) {
-        dispatch({ type: categoryConstraints.GET_ALL_CATEGORY_FAILED, payload: { msg: error?.response.data.msg } });
+        dispatch({ type: categoryConstraints.GET_ALL_CATEGORY_FAILED });
     }
 }
 
@@ -44,11 +40,9 @@ export const getCategoryInfoAction = (id) => async (dispatch) => {
 
     try {
         const { data } = await api.getCategoryInfoApi(id);
-        // console.log(data);
         dispatch({ type: categoryConstraints.GET_CATEGORY_INFO_SUCCESS, payload: { data: data.categoryInfo, msg: data.msg } });
     } catch (error) {
-        let err = error.response.data.msg;
-        dispatch({ type: categoryConstraints.GET_CATEGORY_INFO_FAILED, payload: { msg: err } });
+        dispatch({ type: categoryConstraints.GET_CATEGORY_INFO_FAILED });
     }
 };
 
@@ -57,11 +51,9 @@ export const editCategoryAction = (category, router) => async (dispatch) => {
 
     try {
         const { data } = await api.editCategoryApi(category);
-        alert(data.msg);
         dispatch({ type: categoryConstraints.EDIT_CATEGORY_SUCCESS, payload: { data: data.categories, msg: data.msg } });
         router.push('/categories');
     } catch (error) {
-        console.log(error);
         dispatch({ type: categoryConstraints.EDIT_CATEGORY_FAILED });
     }
 }

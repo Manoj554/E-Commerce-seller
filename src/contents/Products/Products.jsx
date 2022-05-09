@@ -12,12 +12,12 @@ const Products = () => {
     const Mapping = (arr) => {
         return arr.map((val) => (
             <Card
+                key={val.id}
                 base64={val.productImage}
                 name={val.name}
                 price={val.price}
                 priceOffered={val.priceOffered}
                 id={val.id}
-                key={val.id}
                 retailPrice={val.retailPrice}
                 discount={val.percentageOff}
                 deleteId={deleteId}

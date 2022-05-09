@@ -8,7 +8,7 @@ const FooterBox = ({ title, contents }) => {
                 <h3>{title}</h3>
                 <ul>
                     {contents.map(val => (
-                        <li>{val}</li>
+                        <li key={val}>{val}</li>
                     ))}
                 </ul>
             </div>

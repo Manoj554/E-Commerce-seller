@@ -24,8 +24,6 @@ const authReducer = (state = initialState, action) => {
             state = {
                 ...state,
                 loading: false,
-                message: null,
-                error: payload?.msg
             }
             break;
         case authConstraints.SIGNUP_SUCCESS:
@@ -49,7 +47,6 @@ const authReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 message: null,
-                error: payload?.msg,
                 authenticate: false
             }
             break;
@@ -75,7 +72,6 @@ const authReducer = (state = initialState, action) => {
                 ...state,
                 loading: false,
                 message: null,
-                error: payload?.msg
             }
             break;
         case authConstraints.SIGNOUT_SUCCESS:
@@ -104,6 +100,21 @@ const authReducer = (state = initialState, action) => {
                 authenticate: true,
                 loading: false
             }
+
+        //Error Handing
+        case authConstraints.API_REQUEST_FAILED_WITH_ERROR:
+            state = {
+                ...state,
+                error: payload
+            };
+            break;
+        case "HELPERCALL": {
+            state = {
+                ...state,
+                error: null
+            };
+            break;
+        }
         default:
 
     }

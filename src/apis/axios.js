@@ -1,5 +1,6 @@
 import axios from "axios";
 import { signOutAction } from "../redux/actions";
+import { authConstraints } from "../redux/actions/actionConstraints";
 import store from '../redux/store';
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -17,13 +18,14 @@ API.interceptors.response.use((res) => {
     return res;
 }, (err) => {
     if (err.response) {
-        alert(err.response.data.msg);
-        if (err.response.status === 401) {
-            store.dispatch(signOutAction());
-        }
+        // if (err.response.status === 401) {
+        //     store.dispatch(signOutAction());
+        // }
         if (err.response.status === 413) {
             alert("File size should be less than '5MB'.");
         }
+        store.dispatch({ type: "HELPERCALL" });
+        store.dispatch({ type: authConstraints.API_REQUEST_FAILED_WITH_ERROR, payload: err.response?.data?.msg });
     }
     return Promise.reject(err);
 

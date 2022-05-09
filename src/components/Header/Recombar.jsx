@@ -22,9 +22,6 @@ const Recombar = () => {
 		if (searchField.length >= 3) {
 			dispatch(searchFieldAction(searchField));
 		}
-		if (searchField.length == 0) {
-			dispatch(searchFieldAction(searchField));
-		}
 	}, [searchField]);
 	return (
 		<>
