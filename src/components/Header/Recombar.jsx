@@ -3,7 +3,7 @@ import styles from './styles/recombar.module.css';
 import Link from 'next/link';
 import { GoSearch } from 'react-icons/go';
 import { useDispatch, useSelector } from 'react-redux';
-import { searchFieldAction, searchProductByCategoryAction } from '../../redux/actions';
+import { getAllProductAction, searchFieldAction, searchProductByCategoryAction } from '../../redux/actions';
 
 const Recombar = () => {
 	const category = useSelector(state => state.category);
@@ -13,8 +13,12 @@ const Recombar = () => {
 
 	const handleSetCategory = (e) => {
 		setSearchByCategory(e.target.value);
-		if (e.target.value !== '') {
-			dispatch(searchProductByCategoryAction(e.target.value));
+		if (e.target.value === 'all') {
+			dispatch(getAllProductAction());
+		} else {
+			if (e.target.value !== '') {
+				dispatch(searchProductByCategoryAction(e.target.value));
+			}
 		}
 	}
 
@@ -46,12 +50,15 @@ const Recombar = () => {
 						</li>
 						<li >
 							<select value={searchByCategory} onChange={handleSetCategory} name="sortby">
-								<option value={''}>Sort By: Recommemded</option>
+								<option value={''}>Sort By: Category</option>
+								<option value={'all'}>All</option>
 								{category.categories.length > 0 && (
-									category.categories.map((val) => (
-										<option key={val.id} value={val.id}>{val.name}</option>
-									))
-								)}
+									category.categories.map((val) => {
+										if (val.level > 2) {
+											return <option key={val.id} value={val.id}>{val.name}</option>;
+										}
+									}
+									))}
 							</select>
 						</li>
 					</ul>

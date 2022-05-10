@@ -5,8 +5,7 @@ import Recombar from '../../components/Header/Recombar';
 import { useSelector } from 'react-redux';
 
 const Products = () => {
-    const product = useSelector(state => state.product);
-    const { products, searchedProduct } = product;
+    const { loading, products, searchedProduct, isSearched } = useSelector(state => state.product);
     const [deleteId, setDeleteId] = useState('');
 
     const Mapping = (arr) => {
@@ -30,7 +29,7 @@ const Products = () => {
         <>
             <Recombar />
             <div className={styles.galdiv}>
-                {product.loading ? (
+                {loading ? (
                     <>
                         <Card />
                         <Card />
@@ -39,11 +38,11 @@ const Products = () => {
                         <Card />
                     </>
                 ) : (
-                    searchedProduct.length > 0 ? Mapping(searchedProduct) : Mapping(products)
+                    !isSearched ? Mapping(products) : Mapping(searchedProduct)
                 )
                 }
             </div>
-            {!product.loading && product.products.length == 0 && (
+            {!loading && (products.length == 0 || searchedProduct.length == 0) && isSearched && (
                 <p className={styles.noproduct}>No Product Available 😕😕😕</p>
             )}
         </>

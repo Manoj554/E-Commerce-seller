@@ -5,7 +5,8 @@ const initialState = {
     searchedProduct: [],
     loading: false,
     error: null,
-    message: null
+    message: null,
+    isSearched: false
 };
 
 const productReducer = (state = initialState, action) => {
@@ -41,7 +42,8 @@ const productReducer = (state = initialState, action) => {
         case productConstraints.GET_ALL_PRODUCT_REQUEST:
             state = {
                 ...state,
-                loading: true
+                loading: true,
+
             }
             break;
         case productConstraints.GET_ALL_PRODUCT_FAILED:
@@ -59,7 +61,8 @@ const productReducer = (state = initialState, action) => {
                 loading: false,
                 error: null,
                 message: payload?.msg,
-                products: payload?.data
+                products: payload?.data,
+                isSearched: false
             }
             break;
 
@@ -152,7 +155,8 @@ const productReducer = (state = initialState, action) => {
                 loading: false,
                 message: null,
                 error: payload?.msg,
-                searchedProduct: []
+                searchedProduct: [],
+                isSearched: false
             }
             break;
         case productConstraints.SEARCH_PRODUCT_BY_CATEGORY_SUCCESS:
@@ -161,7 +165,8 @@ const productReducer = (state = initialState, action) => {
                 loading: false,
                 error: null,
                 message: payload?.msg,
-                searchedProduct: payload?.data
+                searchedProduct: payload?.data,
+                isSearched: true
             }
             break;
 
