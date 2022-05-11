@@ -8,7 +8,8 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <title>CartAny</title>
+                <title>CartAny - Seller</title>
+                <link rel="shortcut icon" href="Cartany_4_22_crop.png" type="image/x-icon" />
 
             </Head>
             <Provider store={store}>
