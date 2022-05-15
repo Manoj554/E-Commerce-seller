@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <Head>
                 <title>CartAny - Seller</title>
-                <link rel="shortcut icon" href="Cartany_4_22_crop.png" type="image/x-icon" />
+                <link rel="shortcut icon" href="Cartanyviolet.png" type="image/x-icon" />
 
             </Head>
             <Provider store={store}>

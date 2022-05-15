@@ -28,13 +28,23 @@
 .btn button{
     color: white;
     border: none;
-    background-color: rgb(248, 39, 74);
+    
     padding: 20px;
     border-radius: 10px;
     font-size: large;
     transition: 0.6s;
     cursor: pointer;
 }
-.btn button:hover{
+
+.btngreen{
+    background-color: rgb(0, 192, 0);
+}
+.btngreen:hover{
+    background-color: rgb(2, 145, 2);
+}
+.btnred:hover{
     background-color: rgb(204, 15, 47);
+}
+.btnred{
+    background-color: rgb(248, 39, 74);
 }
