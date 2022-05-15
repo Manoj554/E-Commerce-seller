@@ -68,7 +68,8 @@ export default EditProduct;
 
 export async function getServerSideProps(context) {
     const id = context.query.id;
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    // console.log(id)
+    const baseUrl = process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_PRODUCTION_BASE_URL : process.env.NEXT_PUBLIC_LOCAL_BASE_URL;
     try {
         const { data } = await axios.get(`${baseUrl}/product/get-product-info/${id}`);
         return {

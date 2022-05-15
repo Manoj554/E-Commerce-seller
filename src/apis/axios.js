@@ -2,7 +2,7 @@ import axios from "axios";
 import { signOutAction } from "../redux/actions";
 import { authConstraints } from "../redux/actions/actionConstraints";
 import store from '../redux/store';
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const baseUrl = process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_PRODUCTION_BASE_URL : process.env.NEXT_PUBLIC_LOCAL_BASE_URL;
 
 const API = axios.create({
     baseURL: baseUrl,
