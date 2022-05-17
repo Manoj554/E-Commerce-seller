@@ -23,7 +23,7 @@ const Recombar = () => {
 	}
 
 	useEffect(() => {
-		if (searchField.length >= 3) {
+		if (searchField.length >= 3 || searchField.length == 0) {
 			dispatch(searchFieldAction(searchField));
 		}
 	}, [searchField]);

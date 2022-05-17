@@ -138,7 +138,8 @@ const productReducer = (state = initialState, action) => {
                 loading: false,
                 error: null,
                 message: payload?.msg,
-                searchedProduct: payload?.data
+                searchedProduct: payload?.data,
+                isSearched: true
             }
             break;
 

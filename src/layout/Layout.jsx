@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
                 {children}
                 <Footer />
             </div>
-            {/* {console.log(auth.error)} */}
+            {/* {console.log(auth)} */}
             {auth.error?.length > 0 && <Snackbar type="error" message={auth.error} />}
         </>
     )

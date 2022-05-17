@@ -4,7 +4,7 @@ import Orders from '../contents/Orders/Orders';
 
 const orders = () => {
     return (
-        <PrivatePage>
+        <PrivatePage >
             <Orders />
         </PrivatePage>
     )

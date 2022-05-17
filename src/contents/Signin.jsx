@@ -73,10 +73,10 @@ const Signin = () => {
                                     <div className={styles.buttonmargin}>
                                         <button className={styles.button} type='submit'>Sign in</button>
                                     </div>
-                                    <div className={styles.googlemargin}>
+                                    {/* <div className={styles.googlemargin}>
                                         <button className={`${styles.googlebtn} ${styles.button}`} type='submit'><span id={styles.googlelogo}><FaGoogle /></span> Sign in with Google </button>
 
-                                    </div>
+                                    </div> */}
                                 </div>
 
                             </div>
