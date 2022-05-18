@@ -18,11 +18,11 @@ const Landing = () => {
                 <div className={styles.btn}>
                     {auth.authenticate ? (
                         <Link href={'/products'}>
-                            <button className={styles.btngreen}>Go to add products {'>>'}</button>
+                            <button className={styles.btngreen}>Go to add products &#x2794;</button>
                         </Link>
                     ):(
                         <Link href={'/signin'}>
-                        <button className={styles.btnred}>Begin your journey with Cartany! {'>>'}</button>
+                        <button className={styles.btnred}>Begin your journey with Cartany! &#x2794;</button>
                         </Link>
 
                     ) }
