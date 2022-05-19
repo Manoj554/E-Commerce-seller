@@ -88,10 +88,6 @@ const Signup = () => {
                                         <button className={styles.button} type='submit'>Sign up</button>
 
                                     </div>
-                                    <div className={styles.googlemargin}>
-                                        <button className={`${styles.googlebtn} ${styles.button}`} type='button'><span id={styles.googlelogo}><FaGoogle/></span> Sign up with Google</button>
-
-                                    </div>
                                 </div>
                             </div>
                         </>

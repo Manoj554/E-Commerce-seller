@@ -43,7 +43,7 @@ const Products = () => {
                 }
             </div>
             {!loading && (products.length == 0 || searchedProduct.length == 0) && isSearched && (
-                <p className={styles.noproduct}>No Product Available 😕😕😕</p>
+                <p className={styles.noproduct}>No Products Available ⚠️ 😕</p>
             )}
         </>
     )

@@ -8,11 +8,14 @@
 
 .noproduct {
 	text-align: center;
-	font-size: 2rem;
-	font-weight: bold;
-	color: blue;
-	padding: 2rem;
+	flex: 1;
+	font-size: 1.6rem;
+	font-weight: 400;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: rgb(3, 142, 149);
+	padding: 9rem;
 }
+
 
 @media screen and (max-width: 1430px) {
 	.galdiv {
