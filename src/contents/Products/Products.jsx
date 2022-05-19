@@ -16,7 +16,7 @@ const Products = () => {
                 name={val.name}
                 price={val.price}
                 priceOffered={val.priceOffered}
-                id={val.id}
+                id={val.id ? val.id : val._id}
                 retailPrice={val.retailPrice}
                 discount={val.percentageOff}
                 deleteId={deleteId}
